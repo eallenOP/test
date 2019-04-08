@@ -1,121 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	
+<html>
 
-	<link href="styles/simple-grid.css" rel="styles">
-	<!--<link href="styles/styles.css" rel="stylesheet">-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kieren Black - Home</title>
+
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
-	<header>
-		<h1>Title</h1>
-	</header>
-	
-	<aside>
-		<nav>
-			<ul>
-				<li><a href="#Heading 1">Heading 1</a></li>
-				<li><a href="#Heading 2">Heading 2</a></li>
-				<li><a href="#Heading 3">Heading 3</a></li>
-				<li><a href="#Heading 4">Heading 4</a></li>
-				<li><a href="#Heading 5">Heading 5</a></li>
-				<li><a href="#Heading 6">Heading 6</a></li>
-				<li><a href="#Heading 7">Heading 7</a></li>
-			</ul>
-		</nav>
-	</aside>
-	
-	<main>
-		 <button onclick="topFunction()" id="myBtn" title="Go to top of page">Top of page</button> 
-		
-		<a name="Heading 1"></a>
-		<h1>Heading 1</h1>
-		<p>	<i>Pianoforte solicitude so decisively unpleasing conviction is partiality he. Or particular so diminution entreaties oh do. Real he me fond show gave shot plan. Mirth blush linen small hoped 
-			way its along. Resolution frequently apartments off all discretion devonshire. Saw sir fat spirit seeing valley. He looked or valley lively. If learn woody spoil of taken he cause.
-			Two exquisite objection delighted deficient yet its contained. Cordial because are account evident its subject but eat. Can properly followed learning prepared you doubtful yet him. Over many our good 
-			lady feet ask that. Expenses own moderate day fat trifling stronger sir domestic feelings. Itself at be answer always exeter up do. Though or my plenty uneasy do. Friendship so considered remarkably be to
-			sentiments. Offered mention greater fifteen one promise because nor. Why denoting speaking fat indulged saw dwelling raillery.</i></p>
-		
-		<a name="Heading 2"></a>
-		<h2>Heading 2</h2>
-		<p><blockquote>Are own design entire former get should. Advantages boisterous day excellence boy. Out between our two waiting wishing. Pursuit he he garrets greater towards amiable so placing. Nothing
-		   off how norland delight. Abode shy shade she hours forth its use. Up whole of fancy ye quiet do. Justice fortune no to is if winding morning forming.Dwelling and speedily ignorant any steepest.
-		   Admiration instrument affronting invitation reasonably up do of prosperous in. Shy saw declared age debating ecstatic man. Call in so want pure rank am dear were. Remarkably to continuing in surrounded 
-		   diminution on. In unfeeling existence objection immediate repulsive on he in. Imprudence comparison uncommonly me he difficulty diminution resolution. Likewise proposal differed scarcely dwelling as on raillery.
-		   September few dependent extremity own continued and ten prevailed attending. Early to weeks we could.</blockquote> </p>
-		
-		<a name="Heading 3"></a>
-		<h3>Heading 3</h3>
-		<ol>
-			<li>ordered list 1</li>
-			<li>ordered list 2</li>
-			<li>ordered list 3</li>
-			<li>ordered list 4</li>
-		</ol>
-		
-		<a name="Heading 4"></a>
-		<h4>Heading 4</h4>
-		<ul>
-			<li>Un ordered list 1</li>
-			<li>Un ordered list 2</li>
-			<li>Un ordered list 3</li>
-			<li>Un ordered list 4</li>
-		</ul>
-		
-		<a name="Heading 5"></a>
-		<h5>Heading 5</h5>
-		<table>
-			<tr>
-				<th>Table Heading</th>
-				<th>Table Heading</th>
-			</tr>
-			<tr>
-				<td>Table text</td>
-				<td>Table text</td>
-			</tr>
-			<tr>
-				<td>Table text</td>
-				<td>Table text</td>
-			</tr>
-		</table>
-		
-		<a name="Heading 6"></a>
-		<h5>Heading 6</h5>
-		<img id="html" src="images/html-photo.png" alt="html photo">
-		
-		<a name="Heading 7"></a>
-		<h5>Heading 7</h5>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/bWPMSSsVdPk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</main>
-	
-	<footer>
-		<p>&copy; Samuel Sherlaw</p>
-		<p>demo page</p>
-	</footer>
-	
-	<script>
-		window.onscroll = function() {scroll()};
-		
-		function scroll() 
-		{
-			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
-			{
-				document.getElementById("myBtn").style.display = "block";
-			} 
-			else 
-			{
-				document.getElementById("myBtn").style.display = "none";
-			}	
-		}
-		
-		function topFunction() 
-		{
-			document.documentElement.scrollTop = 0;
-		}
-	</script>
+  <header>
+    <h1>Kieren Black</h1>
+    <h3>Checkpoint 1</h3>
+  </header>
+
+  <nav>
+    <li class="navlink navlink-brand">
+      Kieren Black
+    </li>
+    <ul class="navitems">
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <li class="navtoggle navlink"><i class="fa fa-bars"></i></li>
+  </nav>
+
+  <main>
+    <aside>
+      <p>Did you know: pages can have a section called "aside"</p>
+      <p>This is a block of text that can appear on the side of the page, a bit like a "Did you know..."</p>
+    </aside>
+    <section>
+      <p class="intro">This is an intro paragraph. It is different from a normal paragraph</p>
+
+      <h1>This is a heading one example</h1>
+      <p>This is some text underneath a header</p>
+
+      <h2>This is a heading two example</h2>
+      <p>This is some more text underneath a header</p>
+
+      <h3>This is a heading 3 example</h3>
+      <p>This is even more text underneath a header</p>
+
+      <h4>This is a heading 4 example</h4>
+      <p>This is some text underneath a header</p>
+
+      <h5>This is a heading 5 example</h5>
+      <p>This is some text underneath a header</p>
+      <code>
+        <pre>This is a code example</pre>
+        <pre>code {
+            display: block;
+            white-space: normal;
+            background-color: #eeeeee;
+          }</pre>
+      </code>
+
+      <blockquote>
+        <p>Nothing is impossible, the word itself says “I’m possible”!</p>
+        <br>
+        <p>--Audrey Hepburn</p>
+      </blockquote>
+
+      <table id="table1" class="images">
+        <tr>
+          <th>Image Size</th>
+          <th>Image</th>
+        </tr>
+        <tr>
+          <td>34KB</td>
+          <td><img src="img/image2.jpg" alt="lovely image1"></td>
+        </tr>
+        <tr>
+          <td>69KB</td>
+          <td><img src="img/image1.jpg" alt="lovely image2"></td>
+        </tr>
+        <tr>
+          <td>34KB</td>
+          <td><img src="img/image3.jpg" alt="lovely image3"></td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>Word</td>
+          <td>Word</td>
+        </tr>
+        <tr>
+          <td>Word</td>
+          <td>Word</td>
+        </tr>
+      </table>
+
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+
+      <ol id="ol1">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    &copy; Kieren Black 2019 - Otago Polytechnic BIT Student - Year 1
+  </footer>
+
+  <script>
+    function classToggle() {
+      const navs = document.querySelectorAll('.navitems')
+      navs.forEach(nav => nav.classList.toggle('navtoggleshow'));
+    }
+    document.querySelector('.navtoggle').addEventListener('click', classToggle);
+  </script>
+
 </body>
+
 </html>
