@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	
+
+	<link href="styles/simple-grid.css" rel="styles">
+	<!--<link href="styles/styles.css" rel="stylesheet">-->
+</head>
+<body>
+	<header>
+		<h1>Title</h1>
+	</header>
+	
+	<aside>
+		<nav>
+			<ul>
+				<li><a href="#Heading 1">Heading 1</a></li>
+				<li><a href="#Heading 2">Heading 2</a></li>
+				<li><a href="#Heading 3">Heading 3</a></li>
+				<li><a href="#Heading 4">Heading 4</a></li>
+				<li><a href="#Heading 5">Heading 5</a></li>
+				<li><a href="#Heading 6">Heading 6</a></li>
+				<li><a href="#Heading 7">Heading 7</a></li>
+			</ul>
+		</nav>
+	</aside>
+	
+	<main>
+		 <button onclick="topFunction()" id="myBtn" title="Go to top of page">Top of page</button> 
+		
+		<a name="Heading 1"></a>
+		<h1>Heading 1</h1>
+		<p>	<i>Pianoforte solicitude so decisively unpleasing conviction is partiality he. Or particular so diminution entreaties oh do. Real he me fond show gave shot plan. Mirth blush linen small hoped 
+			way its along. Resolution frequently apartments off all discretion devonshire. Saw sir fat spirit seeing valley. He looked or valley lively. If learn woody spoil of taken he cause.
+			Two exquisite objection delighted deficient yet its contained. Cordial because are account evident its subject but eat. Can properly followed learning prepared you doubtful yet him. Over many our good 
+			lady feet ask that. Expenses own moderate day fat trifling stronger sir domestic feelings. Itself at be answer always exeter up do. Though or my plenty uneasy do. Friendship so considered remarkably be to
+			sentiments. Offered mention greater fifteen one promise because nor. Why denoting speaking fat indulged saw dwelling raillery.</i></p>
+		
+		<a name="Heading 2"></a>
+		<h2>Heading 2</h2>
+		<p><blockquote>Are own design entire former get should. Advantages boisterous day excellence boy. Out between our two waiting wishing. Pursuit he he garrets greater towards amiable so placing. Nothing
+		   off how norland delight. Abode shy shade she hours forth its use. Up whole of fancy ye quiet do. Justice fortune no to is if winding morning forming.Dwelling and speedily ignorant any steepest.
+		   Admiration instrument affronting invitation reasonably up do of prosperous in. Shy saw declared age debating ecstatic man. Call in so want pure rank am dear were. Remarkably to continuing in surrounded 
+		   diminution on. In unfeeling existence objection immediate repulsive on he in. Imprudence comparison uncommonly me he difficulty diminution resolution. Likewise proposal differed scarcely dwelling as on raillery.
+		   September few dependent extremity own continued and ten prevailed attending. Early to weeks we could.</blockquote> </p>
+		
+		<a name="Heading 3"></a>
+		<h3>Heading 3</h3>
+		<ol>
+			<li>ordered list 1</li>
+			<li>ordered list 2</li>
+			<li>ordered list 3</li>
+			<li>ordered list 4</li>
+		</ol>
+		
+		<a name="Heading 4"></a>
+		<h4>Heading 4</h4>
+		<ul>
+			<li>Un ordered list 1</li>
+			<li>Un ordered list 2</li>
+			<li>Un ordered list 3</li>
+			<li>Un ordered list 4</li>
+		</ul>
+		
+		<a name="Heading 5"></a>
+		<h5>Heading 5</h5>
+		<table>
+			<tr>
+				<th>Table Heading</th>
+				<th>Table Heading</th>
+			</tr>
+			<tr>
+				<td>Table text</td>
+				<td>Table text</td>
+			</tr>
+			<tr>
+				<td>Table text</td>
+				<td>Table text</td>
+			</tr>
+		</table>
+		
+		<a name="Heading 6"></a>
+		<h5>Heading 6</h5>
+		<img id="html" src="images/html-photo.png" alt="html photo">
+		
+		<a name="Heading 7"></a>
+		<h5>Heading 7</h5>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/bWPMSSsVdPk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</main>
+	
+	<footer>
+		<p>&copy; Samuel Sherlaw</p>
+		<p>demo page</p>
+	</footer>
+	
+	<script>
+		window.onscroll = function() {scroll()};
+		
+		function scroll() 
+		{
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+			{
+				document.getElementById("myBtn").style.display = "block";
+			} 
+			else 
+			{
+				document.getElementById("myBtn").style.display = "none";
+			}	
+		}
+		
+		function topFunction() 
+		{
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+</body>
+</html>
