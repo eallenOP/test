@@ -22,7 +22,7 @@ header {
   width: 100vw;
   height: 330px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background: rgb(2,0,36);
   background: linear-gradient(129deg, rgba(2,0,36,1) 0%, rgba(38,90,98,1) 46%, rgba(0,175,210,1) 100%);
   flex-direction: column;
