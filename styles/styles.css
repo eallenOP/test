@@ -1,0 +1,303 @@
+body {
+  color: #172338;
+  font: 20px arial, sans-serif;
+  background: #d3dae8;
+  margin: 0;
+}
+
+body>* {
+  box-sizing: border-box;
+  /* Sets the width and height of sections to the external size not the content size */
+}
+
+/* Header, footer and navbar */
+
+header, footer {
+  background-color: #666;
+  color: white;
+}
+
+header {
+  display: flex;
+  width: 100vw;
+  height: 330px;
+  align-items: center;
+  justify-content: space-evenly;
+  background: rgb(2,0,36);
+  background: linear-gradient(129deg, rgba(2,0,36,1) 0%, rgba(38,90,98,1) 46%, rgba(0,175,210,1) 100%);
+  flex-direction: column;
+  text-align: center;
+  text-shadow: 2px 2px #000;
+}
+
+header h1 {
+  font-family: "Bookman Old Style";
+  font-size: 80px;
+  font-style: normal;
+  font-variant: small-caps;
+  display: flex;
+}
+
+header h3 {
+  font-family: "Bookman Old Style";
+  font-size: 40px;
+  font-style: normal;
+  font-variant: small-caps;
+  display: flex;
+}
+
+footer {
+  margin-top: 15px;
+  font-size: 15px;
+  padding-left: 5vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+nav {
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(45,38,98,1) 46%, rgba(0,92,210,1) 100%);
+  overflow: hidden;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0 0 0 5vh;
+  margin: 0;
+  float: right;
+}
+
+nav li {
+  list-style: none;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  float: left;
+  min-width: 100px;
+  margin-top: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+  padding: 0 5px;
+  margin-right: 5%;
+}
+
+nav a:hover {
+  background-color: #ccc;
+  border-radius: 5px;
+  color: #444;
+  text-decoration: none;
+}
+
+nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+nav .icon {
+  display: none;
+}
+
+/* Main section */
+
+main {
+  margin: 20px 5vw;
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-auto-flow: dense;
+}
+
+img {
+  max-width: 300px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table.images th, table.images td {
+  border: 1px solid black;
+}
+
+th {
+  padding: 15px;
+}
+
+td {
+  padding: 10px;
+}
+
+ul {
+  list-style-image: url(../img/list-image.png);
+}
+
+ol {
+  list-style-type: lower-roman;
+}
+
+p.intro {
+  font-style: italic;
+}
+
+aside {
+  padding-left: .5rem;
+  margin-left: .5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
+  grid-column-start: 2;
+}
+
+aside>p {
+  margin: .5rem;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  max-width: 350px;
+  border-radius: 5px;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+code {
+  display: block;
+  white-space: normal;
+  background-color: #eeeeee;
+}
+
+section.center_about {
+  display: flex;
+  max-width: 940px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+section.center_about p {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+.navlink {
+  padding-right: 8px;
+}
+
+.navitems {
+  display: flex;
+}
+
+.navitems--right {
+  margin-left: auto;
+}
+
+.navtoggle {
+  display: none;
+}
+
+.navlink-brand {
+  color: #fff;
+  margin: 0 10px;
+}
+
+.fa {
+  float: right;
+  padding-top: 5%;
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+@media only screen and (max-width: 768px) {
+  nav, .navitems {
+    flex-direction: column;
+  }
+
+  .navitems {
+    display: none;
+  }
+
+  .navitems--right {
+    margin-left: 0;
+  }
+
+  .navtoggleshow {
+    display: flex;
+  }
+
+  .navtoggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+    color: #fff;
+    vertical-align: middle;
+  }
+
+  aside {
+    float: none;
+    width: 100%;
+    grid-column: 1;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 10vw;
+    line-height: inherit;
+  }
+
+  header h3 {
+    font-size: 6vw;
+    line-height: inherit;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+}
