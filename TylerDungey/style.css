@@ -1,0 +1,50 @@
+.all{
+    display:flex;
+    max-width: 980px;
+    font: 1em sans-serif;
+    padding: 1em;
+    margin: 1em;
+    max-width: 980px;
+    justify-content: center;
+    flex-direction: column;
+}
+.wrapper{
+    display:grid;
+    grid-template-columns: repeat(12, minmax(0,1fr));
+    grid-gap: 20px;
+}
+nav{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #000;
+    border: 2px solid #000;
+}
+footer {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #000;
+    border: 2px solid #000;
+}
+.banner{
+    display:flex;
+    justify-content: center;
+}
+nav {
+    display:flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    background-color: #000
+}
+.left{
+    grid-column: 1/3;
+}
+.right{
+ grid-column: 3/6;
+}
+a:link, a:visited{
+    color: #FFF;
+    list-style-type: none;
+}
+.center{
+    justify-content: center;
+}

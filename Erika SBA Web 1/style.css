@@ -1,0 +1,91 @@
+header
+{
+  background-image: url("Content/headerSloth.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+    
+}
+.headerimage
+{
+    width: 100%;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: sticky;
+  }
+  h1
+  {
+      text-align: center;
+      color: #333;
+  }
+  main
+  {
+      background-color: #fff;
+      border: #f2f2f2;
+      border-width: 30px;
+      
+  }
+  aside{
+    width: 40%;
+    float: right;
+    font-style: italic;
+    margin: 10px 10px 10px;
+  }
+  .asideimg{
+    width: 40%;
+
+  }
+  
+  footer
+  {
+      clear: both;
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+  }
+  table {
+    width:100%;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 30px;
+    text-align: left;
+  }
+  .imgtable
+  {
+      display: block;
+      width: 30%;
+      margin-left: auto;
+    margin-right: auto;
+  }
+  .container
+  {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .imggrid
+  {
+      width: 50%;
+      border: 1px solid #333;
+      padding: 20px;
+      grid-column: auto;
+      grid-row: auto;
+    
+  }

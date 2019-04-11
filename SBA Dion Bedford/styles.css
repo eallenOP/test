@@ -1,0 +1,162 @@
+/* Css Reset */
+* {
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -2px;
+    }
+    
+    h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, ul, ol, dl {
+    margin: 10px auto;
+    text-align: center
+    }
+
+    li, dd, blockquote {
+    margin-left: 40px;
+    }
+    table {
+    border-collapse: collapse;
+    border:thin solid #aaa;
+    width: 100%;
+    padding: 5px;
+    font-weight: bold;
+    
+    }
+
+    th{
+        background-color:#eee;
+    }
+
+    th p{
+        text-align: center;
+        font-weight:bold;
+    }
+
+    td p{
+        text-align: center
+    }
+
+    td{
+    border:thin solid #aaa;
+    width: 30%;
+    padding: 5px;
+    text-align: center;
+    }
+
+/* Styles */
+
+body{
+    background-color:#fff;
+}
+
+main{
+    margin: 0 10px;
+}
+
+aside{
+    background-color: #bbb;
+    grid-column: 2/2;
+    margin-left: 10px;
+    padding: 10px;
+    border: solid 2px #aaa;
+}
+
+p{
+    text-align: left;
+    margin-top: 10px;
+}
+
+.foot-wrap{
+    max-width: 100%;
+    text-align: center;
+    background-color:#333;
+    height:45px;
+}
+
+.foot-wrap p{
+    text-align: center;
+    color: #fff;
+    padding-top: 15px;
+}
+
+.title-wordz{
+    float: left;
+    padding-left: 20px;
+}
+
+nav{
+    display: block;
+    height: 30px;
+    background:#333;
+}
+
+.nav-list{
+   float: left;
+   list-style-type: none;
+   margin: 0;
+   padding: 0 20px 0 0;
+   margin-top: 5px;
+}
+.nav-list li{
+    display: inline;
+
+}
+
+.nav-list a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container{
+    max-width: 960px;
+    display: block;
+    margin: 50px auto;
+    width: 100%;
+}
+
+h1{
+    margin: 5px auto !important;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.container h2{
+    margin: 10px auto !important;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: left;
+}
+
+.col-grid{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    }
+
+.pic-grid{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 10px;
+    justify-content: center;
+    }
+
+.pic-grid-content{
+    height: 300px;
+    text-align: center;
+    border:thin solid #aaa;
+    border-radius: 2px;
+    padding: 5px;
+}
+.pic-grid-content img{
+    max-width: 80%;
+    max-height: 80%
+}
+
+.pic-grid-content p{
+text-align: center;
+}
