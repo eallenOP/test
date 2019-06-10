@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Quiz</title>
+	<link href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body onload="date()">
+	<header>
+		<div class="wrapper">
+			<img class="logo" src="images/blue_circle.svg" alt="recycling logo">
+
+			<nav>
+				<li><a href="index.html">Homepage</a></li>
+				<li><a href="recycling.html">Dunedin Recycling</a></li>
+				<li><a href="e-Waste.html">e-Waste</a></li>
+				<li><a href="quiz.html">Quiz</a></li>
+				<li><a href="contactus.html">Contact us</a></li>
+				<li><a href="refences.html">Refrences</a></li>
+			</nav>
+		</div>
+
+	</header>
+
+	<main class="infopage">
+		<div>
+
+		</div>
+		<div>
+
+			<h1>Quiz</h1>
+
+			<h2>Welcome to the Recycling Quiz!</h2>
+
+			<form>
+
+				<p>Enter your name here:</p>
+				<input type="text" id="name" value="name">
+
+				<p>Question 1: What one of these can you recycle?</p>
+
+				<div class="question">
+					<div>
+						<select id="q1" class="select">
+							<option value="Milk Carton">Milk Carton</option>
+							<option value="Battery">Battery</option>
+							<option value="Aerosol Can">Aerosol Can</option>
+						</select><br>
+					</div>
+				</div>
+
+				<p>Question 2: Which of these can't you recycle?</p>
+
+				<div class="question">
+					<div>
+						<select id="q2" class="select">
+							<option value="Single use plastic bag">Single use plastic bag</option>
+							<option value="milk bottle">Milk Bottle</option>
+							<option value="Aluminimum Can">Aluminimum Can</option>
+						</select><br>
+					</div>
+				</div>
+
+				<p>Question 3: Witch of these are e-waste?</p>
+
+				<div class="question">
+					<div>
+						<select id="q3" class="select">
+							<option value="tv">TV</option>
+							<option value="Phone">Phone</option>
+							<option value="Computer">Computer</option>
+						</select><br>
+					</div>
+				</div>
+
+				<p>Question 4: What colour are the recyling bins?</p>
+
+				<div class="question">
+					<div>
+						<select id="q4" class="select">
+							<option value="Green">Green</option>
+							<option value="Yellow">Yellow</option>
+							<option value="Red">Red</option>
+						</select><br>
+					</div>
+				</div>
+
+				<p>Question 5: how much does it cost to replace a recycle bin?</p>
+
+				<div class="question">
+					<div>
+						<select id="q5" class="select">
+							<option value="$15">$15</option>
+							<option value="$20">$20</option>
+							<option value="$10">$10</option>
+						</select><br>
+					</div>
+				</div>
+			</form>
+
+			<br>
+
+			<button onclick="question()">Submit</button>
+
+		</div>
+		<div>
+
+		</div>
+	</main>
+
+	<footer>
+		<p>&copy;Samuel Sherlaw</p>
+		<p id="Date">Lastmodifed</p>
+	</footer>
+
+	<script>
+
+		function question() {
+			let score = 0;
+			let user = document.getElementById("name").value;
+
+			if (q1.options[q1.selectedIndex].innerHTML == "Aerosol Can") {
+				score = score + 1;
+			}
+
+			if (q2.options[q2.selectedIndex].innerHTML == "Single use plastic bag") {
+				score = score + 1;
+			}
+
+			if (q3.options[q3.selectedIndex].innerHTML == "Computer") {
+				score = score + 1;
+			}
+
+			if (q4.options[q4.selectedIndex].innerHTML == "Yellow") {
+				score = score + 1;
+			}
+
+			if (q5.options[q5.selectedIndex].innerHTML == "$10") {
+				score = score + 1;
+			}
+
+			alert(user + " got " + score + " out of 5");
+		}
+
+		function date() {
+			var x = document.lastModified;
+			document.getElementById("Date").innerHTML = x;
+		}
+	</script>
+</body>
+
+</html>

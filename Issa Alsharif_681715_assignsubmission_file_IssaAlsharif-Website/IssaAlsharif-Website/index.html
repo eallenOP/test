@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <title>DCC Recycling</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="menu-toggle" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="overlay"></div>
+    <div class="container">
+      <nav>
+        <h1 class="brand"><a href="index.html">D<span>C</span>C</a></h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="landfill.html">Landfill</a></li>
+          <li><a href="cost.html">Cost</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="jobs.html">Careers</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- last modified date -->
+  <div class="last-modified">
+    <p id="demo"></p>
+  </div>
+  <div class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        Strategic Theme 1: Identity Pride
+      </span>
+    </div>
+  </div>
+  <section class="section section-light">
+    <div id="fadeInAnimation">
+      <h2>Rubbish & recycling</h2>
+      <p>
+        Information about recycling, rubbish collection, landfill hours and charges and more.The kerbside collection
+        includes a wider range of recycled materials which fits the DCC Sustainable practice initiative as less waste is
+        going to landfills and recyclable materials remain as a resource.
+      </p>
+    </div>
+  </section>
+  <div class="pimg2">
+    <div class="ptext">
+      <span class="border trans">
+        Strategic Theme 2: Access and Inclusion
+      </span>
+    </div>
+  </div>
+  <section class="section section-dark">
+    <div id="different">
+      <h2>Waste minimisation</h2>
+      <p>
+        We adopted the Waste Management and Minimisation Plan (WMMP) in 2013.
+        To keep pace with changes in the creation, reuse and/or disposal of waste, we review the WMMP at least every six
+        years. A review of our WMMP 2013 is taking place right now, including public consultation on what to keep and
+        what to change.
+        The plan provides the direction for waste minimisation to be achieved.
+      </p>
+    </div>
+  </section>
+  <div class="pimg3">
+    <div class="ptext">
+      <span class="border trans">
+        Strategic Theme 3: Inspired Connections
+      </span>
+    </div>
+  </div>
+  <section class="section section-dark">
+    <div id="fadeInAnimation3" onscroll="function fadeIn3()">
+      <h2>e-Waste</h2>
+      <p>
+        e-Waste is the fastest growing waste stream in developed countries. It is made up of electronic equipment that
+        has come to the end of its useful life and is destined for disposal. It includes for example: televisions,
+        computers, cell phones, photocopiers, printers, stereos, DVD and VCR players, cameras and batteries.
+      </p>
+    </div>
+  </section>
+  <div class="pimg4">
+    <div class="ptext">
+      <span class="border">
+        Strategic Theme 4: Creative Economy
+      </span>
+    </div>
+  </div>
+    <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-social-icons">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/" target="blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/?lang=en" target="blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/" target="blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="jobs.html">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>Design by: <a href="#">Issa Alsharif</a></p>
+      <p class="copyright">Copyright &#169; 2019. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script>
+    //<!-- last modified date -->
+    window.onload = function myFunction() {
+      var x = "Last Modified: " + document.lastModified;
+      document.getElementById("demo").innerHTML = x;
+    };
+    //<!-- On Scroll Animation -->
+    // window.onscroll = function() {myFunction()};
+    window.onscroll = function () { fadeIn() }
+    function fadeIn() {
+      document.getElementById('fadeInAnimation').style.animationName = ('SectionSlideIn');
+    }
+    window.onscroll = function () { fadeIn2() }
+    function fadeIn2() {
+      document.getElementById('different').style.animationName = ('section');
+    }
+    // function fadeIn3() {
+    //   document.getElementById('fadeInAnimation3').style.animationName=('SectionSlideIn3');
+    // }
+    var open = document.getElementById('hamburger');
+    var changeIcon = true;
+    open.addEventListener("click", function () {
+      var overlay = document.querySelector('.overlay');
+      var nav = document.querySelector('nav');
+      var icon = document.querySelector('.menu-toggle i');
+      var header = document.getElementById('header');
+
+      overlay.classList.toggle("menu-open");
+      nav.classList.toggle("menu-open");
+
+      if (changeIcon) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-times");
+
+        changeIcon = false;
+        header.style.height = "100vh";
+      }
+      else {
+        header.style.height = "10vh";
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+        changeIcon = true;
+      }
+    });
+  </script>
+</body>
+</html>

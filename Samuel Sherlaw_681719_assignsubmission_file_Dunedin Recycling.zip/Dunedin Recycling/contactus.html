@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+    <link href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body onload="date()">
+    <header>
+        <div class="wrapper">
+            <img class="logo" src="images/blue_circle.svg" alt="recycling logo">
+
+            <nav>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="recycling.html">Dunedin Recycling</a></li>
+                <li><a href="e-Waste.html">e-Waste</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+                <li><a href="refences.html">Refrences</a></li>
+            </nav>
+        </div>
+
+    </header>
+
+    <main class="infopage">
+        <div>
+
+        </div>
+        <div class="Contacts">
+            <h1>Contact Us</h1>
+
+            <form action="Contact-Us" class="contact-form">
+                <fieldset>
+                    <p>
+                        <br>
+                        <div class="row">
+                            First name: <input type="text" id="firstname"><br><br>
+                        </div>
+                        <br>
+                        <div class="row">
+                            Last name: <input type="text" id="lastname"><br><br>
+                        </div>
+                        <br>
+                        <div class="row">
+                            Email: <input type="text" id="email" class="row3"><br><br>
+                        </div>
+                        <br>
+                        <div class="row"> 
+                            Phone: <input type="text" id="phone" class="row4"><br><br>
+                        </div>
+                        <br>
+                        <div class="row">
+                            Topic: <select class="select">
+                                <option value="Male">Recycling</option>
+                                <option value="e-Waste">e-Waste</option>
+                                <option value="Other">Other</option>
+                            </select><br>
+                            <br>
+                        </div>
+                        <br>
+                        <div class="row">
+                            Message: <br>
+                            <textarea id="subject"></textarea>
+                        </div>
+                    </p>
+                    <br>
+                </fieldset>
+            </form>
+            <br>
+            <button onclick="Submit()">Submit</button>
+        </div>
+        <div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;Samuel Sherlaw</p>
+        <p id="Date">Lastmodifed</p>
+    </footer>
+
+    <script>
+        function Submit() {
+            window.alert("Your question has been submitted");
+            Document.getElementById('firstname').value = "";
+            Document.getElementById('lastname').value = "";
+            Document.getElementById('email').value = "";
+            Document.getElementById('phone').value = "";
+            Document.getElementById('subject').value = "";
+        }
+
+        function date() {
+            var x = document.lastModified;
+            document.getElementById("Date").innerHTML = x;
+        }
+    </script>
+</body>
+
+</html>

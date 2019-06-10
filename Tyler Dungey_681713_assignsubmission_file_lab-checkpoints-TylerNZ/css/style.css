@@ -1,0 +1,336 @@
+
+/*========GRIDS========*/
+
+.container {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header header"
+    "navbar navbar navbar navbar navbar"
+    "main main main main main"
+    "aside extra extra extra sidebar"
+    "footer footer footer footer footer";
+}
+/*main grid*/
+
+.homecontainer{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header header"
+    "navbar navbar navbar navbar navbar"
+    "main main main main main"
+    "main2 main2 main2 main2 main2"
+    "footer footer footer footer footer";
+}
+/*homepage main grid*/
+
+.navcontainer{
+  display: grid;
+  grid-template-columns: 10% 18% 18% 18% 18% 18%;
+  grid-template-areas: 
+    "nav1 nav2 nav3 nav4 nav5 nav6";
+}
+/*nav grid*/
+
+.headcontainer{
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-areas: 
+    "head1 head2 head3";
+}
+/*head grid*/
+
+.footcontainer{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas: 
+    "foot1 foot2 foot3"
+    "foot4 foot4 foot4";
+}
+/*foot grid*/
+
+/*--------GRIDS--------*/
+
+
+
+
+
+
+/*========GRID AREAS========*/
+
+.header {
+  grid-area: header;
+  justify-content: space-between;
+}
+.aside{
+  grid-area: aside;
+  border-right: 1px solid #111111;
+}
+.main {
+  grid-area: main;
+  border-bottom: 1px solid #111111;
+}
+.extra{
+  grid-area: extra;
+}
+.main2{
+  grid-area: main2;
+  background-image: url("http://www.messagemats.co.uk/uploads/oNYr7PDi/767x0_2560x0/Page29ClassicRecycling-C-R.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 500px;
+  padding-bottom: 500px;
+  align-items: center;
+}
+.sidebar {
+  grid-area: sidebar;
+  border-left: 1px solid #111111;
+}
+.navbar{
+  grid-area: navbar;
+}
+.footer {
+  grid-area: footer;
+  background-color: #235800;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+
+.nav1{/*nav area*/
+  grid-area: nav1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #fff;
+}
+.nav2{/*nav area*/
+  grid-area: nav2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #fff;
+}
+.nav3{/*nav area*/
+  grid-area: nav3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #fff;
+}
+.nav4{/*nav area*/
+  grid-area: nav4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #fff;
+}
+.nav5{/*nav area*/
+  grid-area: nav5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #fff;
+}
+.nav6{/*nav area*/
+  grid-area: nav6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.head1{/*head area*/
+  grid-area: head1;
+}
+.head2{/*head area*/
+  grid-area: head2;
+  align-items: center;
+  align-self: center;
+}
+.head3{/*head area*/
+  grid-area: head3;
+}
+
+
+
+.foot1{/*foot area*/
+  grid-area: foot1;
+}
+.foot2{/*foot area*/
+  grid-area: foot2;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+.foot3{/*foot area*/
+  grid-area: foot3;
+}
+.foot4{/*foot area*/
+  grid-area: foot4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*--------GRID AREAS--------*/
+
+
+
+
+
+
+/*========COLOURS========*/
+
+.c1{background-color: #E5EEAB;}
+.c2{background-color: #A8C694;}
+.c3{background-color: #92A533;}
+.c4{background-color: #235800;}
+.c5{background-color: #000000;}
+.white{color: #fff;}
+
+/*--------COLOURS--------*/
+
+
+/*=========FORM=========*/
+form {
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+input, textarea {
+  font-family: "HelveticaNeueLTStd-BlkCn", "Helvetica Neue Condensed Black", sans-serif;
+  letter-spacing: 0;
+  width: 300px;
+  height: 35px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  border-color: #123456;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+  resize: vertical;
+}
+
+.button {
+  padding: .5em; 
+}
+
+
+/*---------FORM---------*/
+
+
+/*========MISC========*/
+
+img{
+  display:flex;
+  max-width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.space{
+  padding:.5em;
+  margin: .5em;
+}
+
+table, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: .7em;
+  margin: .7em;
+}
+
+body{
+  background-color: #edf2f4;
+  font-family: "HelveticaNeueLTStd-BlkCn", "Helvetica Neue Condensed Black", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+h1.title{
+  text-shadow: 0 0 black;
+  box-shadow: -7px 8px #225800;
+  color: black;
+  background-color: #e3de71;
+}
+
+
+a {color:#ffffff;}         /* Unvisited link  */
+a:visited {color:#ffffff;} /* Visited link    */
+a:hover {color:#A8C694;}   /* Mouse over link */
+a:active {color:#92A533; text-decoration: underline;}  /* Selected link   */
+.navnav{text-decoration: none;}/*nav link*/
+p a{color:#111111;}
+p a:visited {color:#111111;}
+/*--------MISC--------*/
+
+
+
+
+
+/*========TEST WIP========*/
+
+.blur-me{filter: blur(1px);}
+/*testing blur effect on homepage*/
+
+#menu-materials li a span {
+  float: left;
+  padding: 6px 0 6px 6px;
+  clear: both;
+}
+#menu-materials li a:hover {
+  color: #A8C694;
+  background: #3B8639;
+  border-bottom: 5px solid #A8C694;
+}
+#menu-materials li a {
+  color: #225800;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 2px;
+  background: #A8C694;
+  border-bottom: 2px solid #3B8639;
+  font-weight: bold;
+  clear: both;
+  overflow: hidden !important;
+  overflow: visible;
+  height: 100%;
+}
+#menu-materials {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#leftmenu li a{
+  color: #111111;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 2px;
+  border-bottom: 2px solid #3B8639;
+  font-weight: bold;
+  clear: both;
+  overflow: hidden !important;
+  overflow: visible;
+  height: 100%;
+}
+#leftmenu li a:hover{
+  border-bottom: 5px solid #3B8639;
+}
+#leftmenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

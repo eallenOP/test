@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Q>
+<Title>My Quiz title</Title>
+<Description>A description about My Quiz</Description>
+<Question>
+<Title>Which city is furthest north</Title>
+<Choice>Paris</Choice>
+<Choice>Lyon</Choice>
+<Choice>Grenoble</Choice>
+</Question>

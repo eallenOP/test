@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Homepage</title>
+        <link href="STYLE.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div class="headNav" id="navbar">
+        <br>
+            <ul>
+                <li class="nav"><a href="Homepage.html">Home </a></li>
+                <li class="nav"><a href="Information.html">Recycling Info </a></li>
+                <li class="nav"><a href="Region.html">My Region </a></li>
+                <li class="nav"><a href="ElectronicWaste.html">e-Waste </a></li>
+                <li class="nav"><a href="Quiz.html">Quiz </a></li>
+                <li class="nav"><a href="Gallery.html">Gallery </a></li>
+            </ul>
+        </div>
+        
+        <div class="boxShadow">
+            <h1 class="boxText">Recycling In Otago</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="headNav">       
+            <h2>WHAT'S THE IMPORTANCE?</h2>
+        </div>
+        <br>
+        <div class="container">
+            <div class="c2">
+                <ol>
+                    <li>Product waste have significant impacts on climate, ecosystems, water, air and communities.</li>
+                    <br>
+                    <li>Plastic is a major form of pollution worldwide. These can harm marine life &amp; may affect life higher on the food chain including humans.</li>
+                    <br>
+                    <li>Food waste makes a significant contribution to the waste sector's greenhouse gas emissions.</li>
+                    <br>
+                    <li>Landfills cost millions to develop and often the sites can't be used for other purposes for decades - they produce methane which is a potent greenhouse gas.</li>
+                </ol>
+            </div>
+            <div class="c3">
+                <iframe src="https://www.youtube.com/embed/qwTgV0znFAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <br>
+            <div class="c2">
+            </div>
+            <br>
+            <div class="c3">
+                <blockquote cite="http://www.recycle.co.nz/problemsize.php">
+                “We have significant problems in NZ where, according to the Ministry for the Environment, we send 2.5 million tonnes of waste to landfills each year. We can do a lot better when we compare ourselves to similar countries. Recycling effectively is a critical way we can reduce this amount of waste going to landfills."
+                </blockquote>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+            <footer>
+                <h3 class="ref">References:</h3>
+                <a href="http://www.recycle.co.nz/problemsize.php" class="ref">The Problem Size</a>
+                <a href="http://www.mfe.govt.nz/waste/why-reducing-reusing-and-recycling-matter" class="ref">Why 3 R's Matter</a>
+                <br>
+                <br>
+                <p>Charmain Pedrigal 2019 ©</p>
+            </footer>
+            <script>
+                window.onscroll = function() {myFunction()};
+
+                let navbar = document.getElementById("navbar");
+                let sticky = navbar.offsetTop;
+
+                function myFunction() {
+                  if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                  } else {
+                    navbar.classList.remove("sticky");
+                  }
+                }
+</script>
+    </body>
+</html>

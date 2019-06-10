@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Homepage</title>
+	<link href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body onload="date()">
+	<header>
+		<div class="wrapper">
+			<img class="logo" src="images/blue_circle.svg" alt="recycling logo">
+
+			<nav>
+				<li><a href="index.html">Homepage</a></li>
+				<li><a href="recycling.html">Dunedin Recycling</a></li>
+				<li><a href="e-Waste.html">e-Waste</a></li>
+				<li><a href="quiz.html">Quiz</a></li>
+				<li><a href="contactus.html">Contact us</a></li>
+				<li><a href="refences.html">Refrences</a></li>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<img class="otago-banner" src="images/otago-region.jpg" alt="otago banner">
+		<h1>Otago Recycling</h1>
+
+		<table class="home-table">
+			<tr>
+				<td>Dunedin Recycling</td>
+				<td>e-Waste</td>
+				<td>Quiz</td>
+				<td>Contact us</td>
+			</tr>
+
+			<tr>
+				<td><img class="home-image-1" src="images/Dunedin_recycling_bin.jpg" alt="Recycling bin"></td>
+				<td><img class="home-image-2" src="images/Dunedin_e-Waste.jpg" alt="e-Waste"></td>
+				<td><img class="home-image-3" src="images/quiz.jpg" alt="quiz"></td>
+				<td><img class="home-image-4" src="images/Mobile_phone.jpg" alt="phone"></td>
+			</tr>
+		</table>
+
+		<br>
+	</main>
+
+	<footer>
+		<p>&copy;Samuel Sherlaw</p>
+		<p id="Date">Lastmodifed</p>
+	</footer>
+
+	<script>
+		function date() {
+			var x = document.lastModified;
+			document.getElementById("Date").innerHTML = x;
+		}
+	</script>
+</body>
+
+</html>

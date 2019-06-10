@@ -1,0 +1,236 @@
+* {box-sizing: border-box;}
+
+body {
+    width: 100%;
+    margin: auto;
+    background: white;
+	font-family: 'verdana', Helvetica;
+}
+
+/* Text */
+
+h1{ /* Header for Body text */
+	font-size: 20px;;
+	color: #333;
+	letter-spacing: 3px;
+	padding-top: 10px;
+}
+
+h2{ /* Footer Headings */
+	font-size: 20px;;
+	color: White;
+	letter-spacing: 2px;
+	text-decoration: underline;
+}
+
+h3{ /* Body smaller Headings */
+	font-size: 19px;;
+	color: White;
+	letter-spacing: 1px;
+	font-weight: bolder;
+}
+
+p1{ /* Body text */
+	font-size: 18px;;
+	color: #333;
+}
+
+p3{ /* Footer text */
+	font-size: 15px;;
+	color: White;
+}
+
+a:link { /* Link decorations */
+  	text-decoration: none;
+}
+
+.logowrap{ /* Top of page logo container */
+	background: #B3C7D6FF;
+	text-align: center;
+}
+
+.tablewrap { /* responsive table for navbar */
+  	display: -ms-flexbox;
+  	display: flex;
+  	-ms-flex-wrap: wrap;
+  	flex-wrap: wrap;
+  	background: #20234d;
+}
+
+.tablewrap2 { /* Home page news stories responsive table */
+  	display: -ms-flexbox;
+  	display: flex;
+  	-ms-flex-wrap: wrap;
+  	flex-wrap: wrap;
+  	padding: 20px;
+}
+
+.container1{ /* Main page content text area */
+	width: 100%;
+	background: white;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	padding-left:5%;
+	padding-right:5%;  
+}
+
+.container2{ /* Secondary page content text area */
+	width: 100%;
+	background: #B3C7D6FF;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	padding-left: 8%;
+	padding-right: 8%; 
+}
+
+.centerText{
+	text-align: center;
+}
+
+.navbarcolumn { /* Nav bar responsive settings */
+  	-ms-flex: 16.66666%; /* IE10 */
+  	flex: 16.66666%;
+  	max-width: 16.66666%;
+	text-align: center;
+	padding: 20px;
+}
+
+.navbarcolumn a { /* Nav bar responsive settings */
+
+	font-size: 18px;;
+	color: white;
+	letter-spacing: 1px;
+}
+
+.navbarcolumn:hover { /* Nav bar responsive settings */
+	background: #333;
+}
+
+.navbarcolumn a:hover { /* Nav bar responsive settings */
+	color: #cf9e2e;
+}
+
+@media screen and (max-width: 1000px) { /* Nav bar responsive settings */
+.navbarcolumn {
+  	-ms-flex: 33.3333%; /* IE10 */
+  	flex: 33.3333%;
+  	max-width: 33.3333%;
+	text-align: center;
+	padding: 10px;
+}}
+
+@media screen and (max-width: 500px) { /* Nav bar responsive settings */
+.navbarcolumn {
+  	-ms-flex: 100%; /* IE10 */
+  	flex: 100%;
+  	max-width: 100%;
+	text-align: center;
+	padding: 10px;
+}}
+
+.twocolumn { /* news table responsive settings */
+  	-ms-flex: 50%; /* IE10 */
+  	flex: 50%;
+  	max-width: 50%;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+}
+
+@media screen and (max-width: 600px) { /* news table responsive settings */
+.twocolumn {
+  	-ms-flex: 100%; /* IE10 */
+  	flex: 100%;
+  	max-width: 100%;
+	text-align: center;
+}}
+
+
+/* -------- Code specific for Contact Us page -------- */
+input[type=text], select { /* Form boxing styling */
+  	width: 100%;
+  	padding: 10px 20px;
+  	margin: 8px 0;
+  	display: inline-block;
+  	border: 1px solid #ccc;
+  	border-radius: 4px;
+  	box-sizing: border-box;
+}
+
+#question_contactUs{
+	height: 150px;
+}
+
+input[type=submit] { /* Submit button */
+  	width: 25%; 
+  	background-color: #20234d;
+  	color: white;
+  	padding: 14px 20px;
+ 	margin: 8px 0;
+	border: none;
+  	border-radius: 10px;
+  	cursor: pointer;
+}
+
+@media screen and (max-width: 500px) { /* Nav bar responsive settings */
+input[type=submit] { /* Submit button */
+  	width: 100%; 
+}}
+
+input[type=button] { /* Submit button */
+  	width: 25%; 
+  	background-color: #20234d;
+  	color: white;
+  	padding: 14px 20px;
+ 	margin: 8px 0;
+	border: none;
+  	border-radius: 10px;
+  	cursor: pointer;
+}
+
+@media screen and (max-width: 500px) { /* Nav bar responsive settings */
+input[type=button] { /* Submit button */
+  	width: 100%; 
+}}
+
+.footer { /* Bottom of page footer */
+  	display: -ms-flexbox;
+  	display: flex;
+  	-ms-flex-wrap: wrap;
+  	flex-wrap: wrap;
+}
+
+.footer1 { /* Bottom of page footer */
+  	-ms-flex: 33.333%; /* IE10 */
+  	flex: 33.333%;
+  	max-width: 33.333%;
+   	text-align: center;
+	background-color: #20234d;
+	padding-top: 10px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+}
+
+@media screen and (max-width: 600px) { /* Nav bar responsive settings */
+.footer1 {
+  	-ms-flex: 100%; /* IE10 */
+  	flex: 100%;
+  	max-width: 100%;
+	text-align: center;
+	padding: 10px;
+}}
+
+.footer2 { /* Bottom of page footer */
+  	-ms-flex: 100%; /* IE10 */
+  	flex: 100%;
+  	max-width: 100%;
+   	text-align: center;
+	background-color: #20234d;
+	bottom: 0px;
+	padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}​

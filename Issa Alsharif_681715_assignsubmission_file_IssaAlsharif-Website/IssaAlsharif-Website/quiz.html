@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <title>Dynamic Quiz</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="menu-toggle" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="overlay"></div>
+    <div class="container">
+      <nav>
+        <h1 class="brand"><a href="index.html">D<span>C</span>C</a></h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="landfill.html">Landfill</a></li>
+          <li><a href="cost.html">Cost</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="jobs.html">Careers</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="quiz">
+      <!-- Quiz Section -->
+      <div id='container'>
+        <div id='title'>
+          <h2>DCC Rubbish & Recycling - Dynamic Quiz</h2>
+        </div>
+        <br />
+        <div id='quiz'></div>
+        <div class='button' id='next'><a href='#'>Next</a></div>
+        <div class='button' id='prev'><a href='#'>Prev</a></div>
+        <div class='button' id='start'> <a href='#'>Start Over</a></div>
+        <!-- <button class='' id='next'>Next</a></button>
+    		<button class='' id='prev'>Prev</a></button>
+    		<button class='' id='start'> Start Over</a></button> -->
+      </div>
+    </div>
+  </main>
+    <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-social-icons">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/" target="blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/?lang=en" target="blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/" target="blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="jobs.html">Careers</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>Designed by: <a href="#">Issa Alsharif</a></p>
+      <p class="copyright">Copyright &#169; 2019. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <script src='questions.json'></script>
+  <script src='jsquiz.js'></script>
+  <script>(function () {
+      var questions = [{
+        question: "What is (Asbestos)?",
+        choices: ["Rubbish Bin", "It's a hazardous substance that is harmful when inhaled", "Something to eat", "No idea", "Beach in Dunedin"],
+        correctAnswer: 1
+      }, {
+        question: "complete the sentence: Sludges and liquids...",
+        choices: ["are very big", "who cares", "very tasty", "can't survive in winter", "requires special handling"],
+        correctAnswer: 4
+      }, {
+        question: "What is the cost of landfilling a Station wagon–large load?",
+        choices: [72, 91, 4, 32, 156],
+        correctAnswer: 0
+      }, {
+        question: "Where is the landfill in Dunedin?",
+        choices: ["South Dunedin", "Pine Hill", "Green Island", "Octagon", "Anderson Bay"],
+        correctAnswer: 2
+      }, {
+        question: "Household batteries can deposited at?",
+        choices: ["In the ocean", "The hazardous waste drop off area", "No idea", "Betteries aren't waste at all", "Just throw it anywhere"],
+        correctAnswer: 1
+      }];
+
+      var questionCounter = 0; //Tracks question number
+      var selections = []; //Array containing user choices
+      var quiz = $('#quiz'); //Quiz div object
+
+      // Display initial question
+      displayNext();
+
+      // Click handler for the 'next' button
+      $('#next').on('click', function (e) {
+        e.preventDefault();
+
+        // Suspend click listener during fade animation
+        if (quiz.is(':animated')) {
+          return false;
+        }
+        choose();
+
+        // If no user selection, progress is stopped
+        if (isNaN(selections[questionCounter])) {
+          alert('Please make a selection!');
+        } else {
+          questionCounter++;
+          displayNext();
+        }
+      });
+
+      // Click handler for the 'prev' button
+      $('#prev').on('click', function (e) {
+        e.preventDefault();
+
+        if (quiz.is(':animated')) {
+          return false;
+        }
+        choose();
+        questionCounter--;
+        displayNext();
+      });
+
+      // Click handler for the 'Start Over' button
+      $('#start').on('click', function (e) {
+        e.preventDefault();
+
+        if (quiz.is(':animated')) {
+          return false;
+        }
+        questionCounter = 0;
+        selections = [];
+        displayNext();
+        $('#start').hide();
+      });
+
+      // Animates buttons on hover
+      $('.button').on('mouseenter', function () {
+        $(this).addClass('active');
+      });
+      $('.button').on('mouseleave', function () {
+        $(this).removeClass('active');
+      });
+
+      // Creates and returns the div that contains the questions and 
+      // the answer selections
+      function createQuestionElement(index) {
+        var qElement = $('<div>', {
+          id: 'question'
+        });
+
+        var header = $('<h2>Question ' + (index + 1) + ':</h2>');
+        qElement.append(header);
+
+        var question = $('<p>').append(questions[index].question);
+        qElement.append(question);
+
+        var radioButtons = createRadios(index);
+        qElement.append(radioButtons);
+
+        return qElement;
+      }
+
+      // Creates a list of the answer choices as radio inputs
+      function createRadios(index) {
+        var radioList = $('<ul>');
+        var item;
+        var input = '';
+        for (var i = 0; i < questions[index].choices.length; i++) {
+          item = $('<li>');
+          input = '<input type="radio" name="answer" value=' + i + ' />';
+          input += questions[index].choices[i];
+          item.append(input);
+          radioList.append(item);
+        }
+        return radioList;
+      }
+
+      // Reads the user selection and pushes the value to an array
+      function choose() {
+        selections[questionCounter] = +$('input[name="answer"]:checked').val();
+      }
+
+      // Displays next requested element
+      function displayNext() {
+        quiz.fadeOut(function () {
+          $('#question').remove();
+
+          if (questionCounter < questions.length) {
+            var nextQuestion = createQuestionElement(questionCounter);
+            quiz.append(nextQuestion).fadeIn();
+            if (!(isNaN(selections[questionCounter]))) {
+              $('input[value=' + selections[questionCounter] + ']').prop('checked', true);
+            }
+
+            // Controls display of 'prev' button
+            if (questionCounter === 1) {
+              $('#prev').show();
+            } else if (questionCounter === 0) {
+
+              $('#prev').hide();
+              $('#next').show();
+            }
+          } else {
+            var scoreElem = displayScore();
+            quiz.append(scoreElem).fadeIn();
+            $('#next').hide();
+            $('#prev').hide();
+            $('#start').show();
+          }
+        });
+      }
+
+      // Computes score and returns a paragraph element to be displayed
+      function displayScore() {
+        var score = $('<p>', { id: 'question' });
+
+        var numCorrect = 0;
+        for (var i = 0; i < selections.length; i++) {
+          if (selections[i] === questions[i].correctAnswer) {
+            numCorrect++;
+          }
+        }
+
+        score.append('You got ' + numCorrect + ' questions out of ' +
+          questions.length + ' right!!!');
+        return score;
+      }
+    })();
+  </script>
+</body>
+
+</html>

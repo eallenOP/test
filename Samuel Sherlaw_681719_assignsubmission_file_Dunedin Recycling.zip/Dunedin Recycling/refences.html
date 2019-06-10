@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Refrence Page</title>
+    <link href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body onload="date()">
+    <header>
+        <div class="wrapper">
+            <img class="logo" src="images/blue_circle.svg" alt="recycling logo">
+
+            <nav>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="recycling.html">Dunedin Recycling</a></li>
+                <li><a href="e-Waste.html">e-Waste</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+                <li><a href="refences.html">Refrences</a></li>
+            </nav>
+        </div>
+
+    </header>
+
+    <main class="infopage">
+        <div>
+        </div>
+        <div>
+            <h1>Refrences</h1>
+
+            <h2>Recycling:</h2>
+
+            <p>
+                Green Island Landfill: <br>
+                https://www.dunedin.govt.nz/services/rubbish-and-recycling/landfills
+            </p>
+
+            <p>
+                Glass Bins: <br>
+                https://www.dunedin.govt.nz/services/rubbish-and-recycling/blue-recycling-bin
+            </p>
+
+            <p>
+                Yellow Bin: <br>
+                https://www.dunedin.govt.nz/services/rubbish-and-recycling/yellow-lidded-wheelie-bins
+            </p>
+
+
+            <h2>e-Waste:</h2>
+
+            <p>
+                e-Waste: <br>
+                https://www.dunedin.govt.nz/services/rubbish-and-recycling/e-waste
+            </p>
+
+            <h2>More Information:</h2>
+
+            <p>
+                Cargill Enterprises: <br>
+                http://www.cargillenterprises.co.nz/services/e-waste-recycling
+            </p>
+
+            <p>
+                EnviroWaste: <br>
+                https://www.envirowaste.co.nz/
+            </p>
+        </div>
+        <div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;Samuel Sherlaw</p>
+        <p id="Date">Lastmodifed</p>
+    </footer>
+
+    <script>
+        function date() {
+            var x = document.lastModified;
+            document.getElementById("Date").innerHTML = x;
+        }
+    </script>
+</body>
+
+</html>

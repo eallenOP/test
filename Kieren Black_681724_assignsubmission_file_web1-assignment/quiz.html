@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <ul class="navlink navlink-brand">
+            <li>Recycling</li>
+        </ul>
+        <ul class="navitems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="whatgoeswhere.html">What goes where?</a></li>
+            <li><a href="landfills.html">Landfills</a></li>
+            <li><a href="ewaste.html">E Waste</a></li>
+            <li><a href="howcani.html">How can I be Friendly</a></li>
+            <li><a class="active" href="quiz.html">Quiz</a></li>
+        </ul>
+        <ul class="navtoggle navlink">
+            <li class="fa fa-bars"></li>
+        </ul>
+    </nav>
+    <header>
+
+    </header>
+
+    <main>
+        <section class="heading">
+            <h1>Quiz</h1>
+        </section>
+        <section class="span2">
+            <form>
+                <input type="hidden" name="previous" value="0">
+                <input type="hidden" name="first" value="1">
+                <fieldset>
+                    <legend>Details</legend>
+                    <section class="details">
+                        <label for="name">Name</label>
+                        <input name="name">
+                    </section>
+                    <section class="details">
+                        <label for="email">Email</label>
+                        <input type="email" name="email">
+                    </section>
+                    <section class="details">
+                        <label for="gender">Gender</label>
+                        <select name="gender">
+                            <option value=""></option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="ns">Not Specified</option>
+                        </select>
+                    </section>
+                </fieldset>
+                <fieldset>
+                    <legend>Quiz</legend>
+                    <label for="0">What coloured bin is for glass?</label>
+                    <section>
+                        <ul>
+                            <li><input type="radio" name="0" value="1">Red</li>
+                            <li><input type="radio" name="0" value="2">Blue</li>
+                            <li><input type="radio" name="0" value="3">Green</li>
+                            <li><input type="radio" name="0" value="4">Yellow</li>
+                        </ul>
+                    </section>
+                    <label for="1">Where is the local landfill for Dunedin?</label>
+                    <section>
+                        <ul>
+                            <li><input type="radio" name="1" value="1">Burnside</li>
+                            <li><input type="radio" name="1" value="2">Green Island</li>
+                            <li><input type="radio" name="1" value="3">Mosgiel</li>
+                        </ul>
+                    </section>
+                    <label for="2">What is classed as E Waste?</label>
+                    <section>
+                        <ul>
+                            <li><input type="radio" name="2" value="1">Composte</li>
+                            <li><input type="radio" name="2" value="2">Pastic Bottles</li>
+                            <li><input type="radio" name="2" value="3">Cell Phone</li>
+                        </ul>
+                    </section>
+
+                    <label for="3">Are plastic bags recyclable?</label>
+                    <section>
+                        <ul>
+                            <li><input type="radio" name="3" value="1">Yes</li>
+                            <li><input type="radio" name="3" value="2">No</li>
+                        </ul>
+                    </section>
+
+                    <label for="4">What can go in your Yellow bin?</label>
+                    <section>
+                        <ul>
+                            <li><input type="radio" name="4" value="1">Plastic Bottles</li>
+                            <li><input type="radio" name="4" value="2">Tins and cans</li>
+                            <li><input type="radio" name="4" value="3">Flattened Cardboard</li>
+                            <li><input type="radio" name="4" value="4">All of the above</li>
+                        </ul>
+                    </section>
+
+                    <label for="5">Where can I dispose of Lithium Batteries?</label>
+                    <section>
+                        <ul>
+                            <li><input type="radio" name="5" value="1">Red wheelie bin</li>
+                            <li><input type="radio" name="5" value="2">Blue Bin</li>
+                            <li><input type="radio" name="5" value="3">Yellow wheelie Bin</li>
+                            <li><input type="radio" name="5" value="4">Green Island Landfill</li>
+                        </ul>
+                    </section>
+
+                    <input type="button" value="Check Results" id="quizSubmit">
+                    <p>Check below for reults</p>
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="quiz_results">
+            <h3>Results</h3>
+            <p class="details1"></p>
+            <p class="results"></p>
+        </section>
+    </main>
+
+    <footer id="footer">
+        &copy; Kieren Black 2019 - Otago Polytechnic BIT Student - Year 1
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/body.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>

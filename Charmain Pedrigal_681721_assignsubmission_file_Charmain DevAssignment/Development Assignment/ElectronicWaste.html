@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Electronic Waste</title>
+        <link href="STYLE.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="headNav"  id="navbar">
+        <br>
+        <ul>
+            <li class="nav"><a href="Homepage.html">Home </a></li>
+            <li class="nav"><a href="Information.html">Recycling Info </a></li>
+            <li class="nav"><a href="Region.html">My Region </a></li>
+            <li class="nav"><a href="ElectronicWaste.html">e-Waste </a></li>
+            <li class="nav"><a href="Quiz.html">Quiz </a></li>
+            <li class="nav"><a href="Gallery.html">Gallery </a></li>
+        </ul>
+        </div>
+        <div class="boxShadow">
+            <h1 class="boxText">Electronic Waste</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="headNav">
+            <h2>WHAT SHOULD I DO WITH MY E-WASTE?</h2>
+            <br>
+            <img class="headNavIMG" src="images/ewaste.png" alt="icon">
+            <br>
+            <br>
+        </div>
+        <div class="container1">
+            <div class="c5">
+                <table class="tableShadow">
+                    <tr>
+                        <td><b>Don't trash them:</b></td>
+                        <td>Never throw e-waste in the trash as it has toxic chemicals that don't belong in the trash. It also has valuable metals that can be recycled.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Pass them on for reuse:</b></td>
+                        <td>If you have an electronic that works but don't want to use it anymore, give it to family or friend so they could make use of it. Or donate it to charity.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Learn to fix broken gadgets yourself:</b></td>
+                        <td>Some gadgets are easy to fix. Fixing them could save you alot of money than buying a brand new gadget.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Find a good e-waste recycler:</b></td>
+                        <td>This includes all unbroken glass, some plastics, paper, cardboard, tin &amp; aluminium cans.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Avoid buying packaged and unrecycled goods:</b></td>
+                        <td>Buy cereals, pastas &amp; other refillables in bulk when at the supermarket.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Say NO to plastic bags:</b></td>
+                        <td>Use canvas &amp; other reusable bags when going shopping.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Take glass or recyclable containers when grocery shopping:</b></td>
+                        <td>Use these for goods that would otherwise be wrapped. Such as meat, fish and vegetables.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Give away what you no longer need:</b></td>
+                        <td>Charity shops will sell your old belongings in order to raise funds for their efforts.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Sell what you don't want to give away:</b></td>
+                        <td>There are heaps of places where you can potentially sell old items.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Shop local:</b></td>
+                        <td>Visiting your local butcher, greengrocer, and farmers market will help stimulate our local economy and keep the dollar on our shores. Plus, you’d reduce your personal footprint in the process.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <footer>
+            <h3 class="ref">References:</h3>
+            <a href="http://www.electronicstakeback.com/how-to-recycle-electronics/resources-for-kids/" class="ref">Recycling Electronics</a>
+            <br>
+            <br>
+            <p>Charmain Pedrigal 2019 ©</p>
+        </footer>
+        <script>
+            window.onscroll = function() {myFunction()};
+
+                let navbar = document.getElementById("navbar");
+                let sticky = navbar.offsetTop;
+
+                function myFunction() {
+                  if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                  } else {
+                    navbar.classList.remove("sticky");
+                  }
+                }
+        </script>
+    </body>
+</html>

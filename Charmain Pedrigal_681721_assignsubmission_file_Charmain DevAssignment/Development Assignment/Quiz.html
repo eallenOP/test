@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quiz</title>
+        <link href="STYLE.css" rel="stylesheet">
+        <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    </head>
+    <body>
+        <div class="headNav"  id="navbar">
+        <br>
+        <ul>
+            <li class="nav"><a href="Homepage.html">Home </a></li>
+            <li class="nav"><a href="Information.html">Recycling Info </a></li>
+            <li class="nav"><a href="Region.html">My Region </a></li>
+            <li class="nav"><a href="ElectronicWaste.html">e-Waste </a></li>
+            <li class="nav"><a href="Quiz.html">Quiz </a></li>
+            <li class="nav"><a href="Gallery.html">Gallery </a></li>
+        </ul>
+        </div>
+        
+        <div class="boxShadow">
+            <h1 class="boxText">Quiz Time!</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container1">
+            <div class="c5 c5Quiz">
+                <form class="profile-form">
+                    <br>
+                    Firstname: <input name="firstname" type="text" id="persons-firstname">
+                    <br>
+                    <br>
+                    Lastname: <input name="lastname" type="text" id="persons-lastname">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <legend><h3>How well do you know how to recycle?</h3></legend>
+                <ol>   
+                    <br>
+                    <li>You've been clothes shopping. Can you recycle those shopping bags?</li><br>
+                        <input type="checkbox" value="YES" id="Q1" class="box"> YES<br>
+                        <input type="checkbox" value="NO" id="Q1" class="box"> NO
+                        <br>
+                        <br>
+                        <br>
+                    <li>Should you put polystyrene in the recycling bin?</li><br>
+                        <input type="checkbox" value="YES" id="Q2" class="box"> YES <br>
+                        <input type="checkbox" value="NO" id="Q2" class="box"> NO
+                        <br>
+                        <br>
+                        <br>
+                    <li>Which of the following can't be recycled?</li>
+                        <select id="Q3">
+                        <option value="Milk Carton">Milk Carton</option>
+                        <option value="Plastic Water Bottles">Plastic Water Bottles</option>
+                        <option value="Glass Containers">Glass Containers</option>
+                        <option value="Paper Bags">Paper Bags</option>
+                        <option value="None of the above">None of the above</option>
+                        </select>
+                    <br>
+                    <br>
+                    <br>
+                    <li>How many times can glass be recycled?</li>
+                        <select id="Q4">
+                        <option value="Glass can't be recycled">Glass can't be recycled</option>
+                        <option value="20 times">20 times</option>
+                        <option value="Only Once">Only Once</option>
+                        <option value="Forever">Forever</option>
+                        <option value="Twice">Twice</option>
+                        </select>
+                    <br>
+                    <br>
+                    <br>
+                    <li>Where would you put a takeaway coffee cup?</li><br>
+                        <input type="checkbox" value="RUBBISH" id="Q5" class="box"> RUBBISH <br>
+                        <input type="checkbox" value="RECYCLING" id="Q5" class="box"> RECYCLING
+                    <br>
+                    <br>
+                    <br>
+                    <li>Do you need to rinse dirty items before putting them in the bin?</li><br>
+                        <input type="checkbox" value="YES" id="Q6" class="box"> YES <br>
+                        <input type="checkbox" value="NO" id="Q6" class="box"> NO
+                    <br>
+                    <br>
+                    <br>
+                    <li>Can you put plastic bags in your recycling bin?</li><br>
+                        <input type="checkbox" value="YES" id="Q7" class="box"> YES <br>
+                        <input type="checkbox" value="NO" id="Q7" class="box"> NO
+                    <br>
+                    <br>
+                    <br>
+                    <li>Which of the following represents the three R's?</li>
+                        <select id="Q8">
+                        <option value="Reduce - Rearrange - Recycle">Reduce - Rearrange - Recycle</option>
+                        <option value="Reduce - Reuse - Recycle">Reduce - Reuse - Recycle</option>
+                        <option value="Reduce - Reuse - Reconsider">Reduce - Reuse - Reconsider</option>
+                        <option value="Reduce - Reuse - Respect">Reduce - Reuse - Respect</option>
+                        </select>
+                    <br>
+                    <br>
+                    <br>
+                    <li>Composting is achieved through recycling what?</li>
+                        <select id="Q9">
+                        <option value="Batteries">Batteries</option>
+                        <option value="Plastic">Plastic</option>
+                        <option value="Organic Waste">Organic Waste</option>
+                        <option value="Glass">Glass</option>
+                        </select>
+                    <br>
+                    <br>
+                    <br>
+                    <li>The recycling label / logo has:</li>
+                        <select id="Q10">
+                        <option value="One Arrow">One Arrow</option>
+                        <option value="Two Arrows">Two Arrows</option>
+                        <option value="Three Arrows">Three Arrows</option>
+                        <option value="A Tree">A Tree</option>
+                        </select>
+                </ol>
+                <br>
+                <br>
+                <br>
+                <button type="button" onclick="getProfile()" id="check">Submit</button>
+                <br>
+                <br>
+                <br>
+            </form>
+            <br>
+            <br>
+            <br>
+        <!--Placeholder-->
+            <div class="profile">
+                <p id="nameArea">Name's Results</p>
+                <table>
+                        <tr>
+                            <th class="greenSection">Your Answer</th>
+                            <th class="greenSection">Correct Answer</th>
+                            <th class="greenSection"></th>
+                        </tr>
+                        <tr>
+                            <td id="answer1"></td>
+                            <td id="correct1">YES</td>
+                            <td>Remove the sythetic handles &amp; recycle the paper bag in the paper bin.</td>
+                        </tr>
+                        <tr>
+                            <td id="answer2"></td>
+                            <td id="correct2">NO</td>
+                            <td>Polystyrene foam prevents paper from being recycled.</td>
+                        </tr>
+                        <tr>
+                            <td id="answer3"></td>
+                            <td id="correct3">None of the above</td>
+                            <td>All the items listed can &amp; should be recycled.</td>
+                        </tr>
+                        <tr>
+                            <td id="answer4"></td>
+                            <td id="correct4">Forever</td>
+                            <td>Glass never wears out! So you can recycle it however many times.</td>
+                        </tr>
+                        <tr>
+                            <td id="answer5"></td>
+                            <td id="correct5">RUBBISH</td>
+                            <td>Takeaway coffee cups can't be recycled. But there are a range of reusable cups available everywhere which you can surely reuse many times.</td>
+                        </tr>
+                        <tr>
+                            <td id="answer6"></td>
+                            <td id="correct6">YES</td>
+                            <td>Dirty items can attract ants, animals and it can go rancid before they reach processing. It could make everything in the recycling bin unusable.</td>
+                        </tr>
+                        <tr>
+                            <td id="answer7"></td>
+                            <td id="correct7">NO</td>
+                            <td>Plastic &amp; other soft plastics can be recycled but not by the council. These can get caught in machinery &amp; cause serious damage. Keep them separate &amp; look for a drop-off point.</td>
+                        </tr>
+                        <tr>
+                            <td id="answer8"></td>
+                            <td id="correct8">Reduce - Reuse - Recycle</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td id="answer9"></td>
+                            <td id="correct9">Organic Waste</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td id="answer10"></td>
+                            <td id="correct10">Three Arrows</td>
+                            <td></td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <h3 class="ref">References:</h3>
+        <a href="https://www.theguardian.com/environment/2018/jul/01/think-you-know-how-to-recycle-take-the-quiz" class="ref">The Guardian Quiz</a>
+        <a href="https://www.nps.gov/anch/upload/RecyclingQuizFinal.pdf" class="ref">NPS Quiz</a>
+        <a href="https://ourauckland.aucklandcouncil.govt.nz/articles/news/2017/11/are-you-a-rad-recycler-take-our-quiz-to-find-out/" class="ref">Auckland Council Quiz</a>
+        <a href="http://2gym-zefyr.att.sch.gr/recycle/recquiz.htm" class="ref">RecQuiz</a>
+        <br>
+        <br>
+        <p>Charmain Pedrigal 2019 ©</p>
+    </footer>
+    <script>
+        $(".profile").hide();
+        $("button").click(function() {
+            $(".profile").show(3000);
+        })
+
+        function getProfile() {
+            let name = document.getElementById("persons-firstname").value;
+            document.getElementById("nameArea").innerHTML = name + "'s Results";
+
+            /*let Q1 = document.getElementById("Q1").value;
+            document.getElementById("answer1").innerHTML = Q1;*/
+
+            let shopping = document.forms[0];
+            let txt1 = " ";
+            let i1;
+            for (i1 = 0; i1 < shopping.length; i1++)
+                {
+                    if (shopping[i1].checked) {
+                        txt1 = shopping[i1].value + " ";
+                    }
+                }
+            document.getElementById("answer1").innerHTML = txt1;
+
+            /*let Q2 = document.getElementById("Q2").value;
+            document.getElementById("answer2").innerHTML = Q2;*/
+
+            let polystyrene = document.forms[0];
+            let txt2 = " ";
+            let i2;
+            for (i2 = 0; i2 < polystyrene.length; i2++)
+                {
+                    if (polystyrene[i2].checked) {
+                        txt2 = polystyrene[i2].value + " ";
+                    }
+                }
+            document.getElementById("answer2").innerHTML = txt2;
+
+            let Q3 = document.getElementById("Q3").value;
+            document.getElementById("answer3").innerHTML = Q3;
+
+            let Q4 = document.getElementById("Q4").value;
+            document.getElementById("answer4").innerHTML = Q4;
+
+            /*let Q5 = document.getElementById("Q5").value;
+            document.getElementById("answer5").innerHTML = Q5;*/
+
+            let coffeecup = document.forms[0];
+            let txt5 = " ";
+            let i5;
+            for (i5 = 0; i5 < coffeecup.length; i5++)
+                {
+                    if (coffeecup[i5].checked) {
+                        txt5 = coffeecup[i5].value + " ";
+                    }
+                }
+            document.getElementById("answer5").innerHTML = txt5;
+
+            /*let Q6 = document.getElementById("Q6").value;
+            document.getElementById("answer6").innerHTML = Q6;*/
+
+            let dirtyitems = document.forms[0];
+            let txt6 = " ";
+            let i6;
+            for (i6 = 0; i6 < dirtyitems.length; i6++)
+                {
+                    if (dirtyitems[i6].checked) {
+                        txt6 = dirtyitems[i6].value + " ";
+                    }
+                }
+            document.getElementById("answer6").innerHTML = txt6;
+
+            /*let Q7 = document.getElementById("Q7").value;
+            document.getElementById("answer7").innerHTML = Q7;*/
+
+            let plastic = document.forms[0];
+            let txt7 = " ";
+            let i7;
+            for (i7 = 0; i7 < plastic.length; i7++)
+                {
+                    if (plastic[i7].checked) {
+                        txt7 = plastic[i7].value + " ";
+                    }
+                }
+            document.getElementById("answer7").innerHTML = txt7;
+
+            let Q8 = document.getElementById("Q8").value;
+            document.getElementById("answer8").innerHTML = Q8;
+
+            let Q9 = document.getElementById("Q9").value;
+            document.getElementById("answer9").innerHTML = Q9;
+
+            let Q10 = document.getElementById("Q10").value;
+            document.getElementById("answer10").innerHTML = Q10;
+        }
+        
+        window.onscroll = function() {myFunction()};
+
+                let navbar = document.getElementById("navbar");
+                let sticky = navbar.offsetTop;
+
+                function myFunction() {
+                  if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                  } else {
+                    navbar.classList.remove("sticky");
+                  }
+                }
+    </script>
+</body>
+</html>

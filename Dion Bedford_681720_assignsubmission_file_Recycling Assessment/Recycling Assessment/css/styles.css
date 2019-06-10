@@ -1,0 +1,224 @@
+/*      Base color scheme and style for the document     */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  flex: 1 0 auto;
+  font-size: 17px; }
+
+h1 {
+  margin-bottom: 3.1rem;
+  text-align: left; }
+
+blockquote {
+  border-left: 5px solid orange; }
+
+p {
+  text-align: justify; }
+
+/*        Styles for all hero images / banners        */
+.hero-home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Hills.jpg");
+  height: 70vh;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-bottom: medium solid orange; }
+
+.hero-regular {
+  margin-top: 20px;
+  height: 40vh;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-bottom: medium solid orange; }
+
+.quiz {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/business-team.jpg"); }
+
+.contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/contact-us.jpg"); }
+
+.greenNz {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/sea.jpg"); }
+
+.e-waste {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/chip.jpeg"); }
+
+.area {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/recycle-cycle.jpg"); }
+
+.hero-text-regular {
+  position: absolute;
+  top: 50%;
+  left: 24%;
+  transform: translate(-50%, -50%);
+  color: white; }
+  .hero-text-regular h1 {
+    font-size: 56px;
+    text-align: right;
+    font-weight: 500; }
+
+.hero-text-index {
+  position: absolute;
+  top: 70%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  color: white; }
+  .hero-text-index h1 {
+    font-size: 55px;
+    text-align: right; }
+
+/*            Navigation Menu & footer          */
+.nav-padding {
+  margin: 0 50px; }
+
+/*      Footer Adjustments      */
+.footer-margin-reset {
+  margin-bottom: 0; }
+
+/*      Index Page      */
+.index-grid {
+  max-width: 20vw;
+  text-align: center; }
+
+.index-text {
+  text-decoration: none;
+  color: black;
+  text-align: center; }
+
+/*        Area Page            */
+.area-page-banner {
+  max-width: 45%;
+  height: auto;
+  float: right;
+  border: transparent;
+  border-radius: 10px;
+  margin: 0px 10px 10px 50px;
+  border-bottom: orange solid medium; }
+
+.norm-list {
+  list-style-position: inside  !important;
+  list-style-type: circle !important; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  justify-items: center; }
+
+.grid-item {
+  padding: 50px;
+  text-align: left;
+  align-items: center; }
+
+.top-whitespace {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.width-restrict {
+  max-width: 80%;
+  margin: 0 auto; }
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 400px;
+  width: 400px; }
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 400px;
+  width: 400px; }
+
+/*          Quiz Page           */
+.quiz-intro {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin: 60px; }
+
+.quiz-title {
+  background-color: #212121;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px; }
+
+.quiz-form {
+  background-color: #424242;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  padding: 10px 50px 80px 50px; }
+  .quiz-form label {
+    color: whitesmoke; }
+  .quiz-form h3 {
+    margin-top: 50px;
+    margin-bottom: 0px; }
+
+.quiz-button {
+  margin: 20px;
+  float: right; }
+
+.question-text {
+  text-align: left;
+  background-color: #212121;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center; }
+
+#resultArea {
+  display: none;
+  padding: 15px;
+  margin-top: 20px; }
+
+.result-title {
+  margin-bottom: 60px; }
+
+h2.quizScore {
+  font-family: Arial, sans-serif;
+  font-size: 45px;
+  text-align: center;
+  margin-top: 140px; }
+
+div.quizAnswers {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #424242;
+  padding: 4px 0 4px 0; }
+
+label {
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  color: #424242;
+  vertical-align: top;
+  margin-left: 30px; }
+
+.hide {
+  display: none; }
+
+.wrong-answer {
+  color: red;
+  margin: 0;
+  line-height: 0; }
+
+.right-answer {
+  color: green;
+  margin: 0;
+  line-height: 0; }
+
+.name {
+  font-size: 22px; }
+
+/*          Contact Page            */
+.card-margin {
+  margin-left: 2rem; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recycle Otago</title>
+
+    <!--            Framework CDN, JQuery CDN, User Written Scripts           -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
+    <!--            Framework Style CDN, Font Awesome & Material Icon CDN`s, User Written Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> 
+
+    <!--                         Favicon                                  -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <!-- Full Screen Navigation -->
+        <nav class="indigo lighten-1">
+            <div class="nav-wrapper nav-padding">
+                <a href="index.html" class="brand-logo">Recycle Otago<i class="material-icons left">terrain</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="area.html">Recycling in your Area</a></li>
+                <li><a href="eWaste.html">E-waste</a></li>
+                <li><a href="#">Quiz</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="hero-regular quiz">
+            <div class="hero-text-regular">
+                <h1>Recycling Quiz</h1>
+            </div>
+        </div>
+        <div class="container">
+       <div> 
+        <p class="quiz-intro"> Below we have prepared a fun quiz related to recycling within the Otago region. All answers to these questions can be found within the website, try and test your knowledge to see how much you can remember!</p>
+        <h1 class="quiz-title">Quiz</h1>
+                <form class= quiz-form>
+                       <h3> Question 1</h3>
+                       <p class="question-text">What is the address for Cargill Enterprises Dunedin?</p>
+                        <p class="question">
+                        <label>
+                            <input class="answer with-gap" checked type="radio" name="q1" value="1"/>
+                            <span>199 Hillside Road</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input class="answer with-gap" type="radio" name="q1" value="0">
+                            <span>189 Hillside Road</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input class="answer with-gap" type="radio" name="q1" value="0"  />
+                            <span>189 South Road</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input class="answer with-gap" type="radio" name="q1" value="0"/>
+                            <span>199 Bayview Road</span>
+                        </label>
+                        </p>
+
+
+                        <h3> Question 2</h3>
+                        <p class="question-text">In Dunedin, What can be put in the blue recycle bins?</p>
+                        <p class="question">
+                        <label>
+                            <input class="answer with-gap" checked type="radio" name="q2" value="0"/>
+                            <span>Cardboard</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input class="answer with-gap" type="radio" name="q2" value="0">
+                            <span>Waste</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input class="answer with-gap" type="radio" name="q2" value="0"  />
+                            <span>e-waste</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input class="answer with-gap" type="radio" name="q2" value="1"/>
+                            <span>Glass</span>
+                        </label>
+                        </p>
+                        
+                        <h3>Question 3</h3>
+                        <p class="question-text">Cellphones / Computers and electronic devices can be recycled. These can be put in the recycling where any cans or other metals would normallly be recycled.</p>
+                      <div class="switch question">
+                        <label>
+                        False
+                        <input type="checkbox" name="q3" id="checkbox1" value="1">
+                        <span class="lever"></span>
+                        True
+                        </label>
+                      </div>
+
+                      <h3> Question 4</h3>
+                      <p class="question-text">Where is Waste Busters?</p>
+                        <p class="question">
+                        <label>
+                            <input class="answer with-gap" checked type="radio" name="q4" value="0"/>
+                            <span>Cromwell</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input class="answer with-gap" type="radio" name="q4" value="1">
+                            <span>Alexandra</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input class="answer with-gap" type="radio" name="q4" value="0"  />
+                            <span>Wanaka</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input class="answer with-gap" type="radio" name="q4" value="0"/>
+                            <span>Queenstown</span>
+                        </label>
+                        </p>
+
+                        <h3> Question 5</h3>
+                        <p class="question-text">What can NOT be put in yellow recycle bins in Dunedin?</p>
+                        <label>
+                        <select class="browser-default question">
+                            <option value="0" disabled selected>Choose your option</option>
+                            <option value="0" name="q5">Rigid Plastic</option>
+                            <option value="0" name="q5">Cardboard</option>
+                            <option value="1" name="q5">Nappies</option>
+                            <option value="0" name="q5">Cans</option>
+                            <option value="0" name="q5">Tin</option>
+                        </select>
+                        </label>
+
+
+                        <h3> Question 6</h3>
+                        <p class="question-text">What is currently not recycled in the Wakitipu kerbside collection? </p>
+                        <p class="question">
+                        <label>
+                            <input class="answer with-gap" checked type="radio" name="q6" value="0"/>
+                            <span>Cardboard</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input class="answer with-gap" type="radio" name="q6" value="0">
+                            <span>Tin</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input class="answer with-gap" type="radio" name="q6" value="1"  />
+                            <span>Glass</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input class="answer with-gap" type="radio" name="q6" value="0"/>
+                            <span>Cans</span>
+                        </label>
+                        </p>
+                        
+                        <h3>Question 7</h3>
+                        <p class="question-text">Does Mount Cooee Landfill accept and Recycle e-waste?</p>
+                      <div class="switch question">
+                        <label>
+                        No
+                        <input type="checkbox" name="q7" id="checkbox2" value="0">
+                        <span class="lever"></span>
+                        Yes
+                        </label>
+                      </div>
+
+                      <h3>Question 8</h3>
+                      <p class="question-text">The Maximum Weight for Recycle Bin Collection in Central Otago is 55kg.</p>
+                    <div class="switch question">
+                      <label>
+                      False
+                      <input type="checkbox" name="q8" id="checkbox3" value="1">
+                      <span class="lever"></span>
+                      True
+                      </label>
+                    </div>
+
+                    <h3> Question 9</h3>
+                    <p class="question-text">What is NOT approved Greenwaste at Mount Cooee Landfill?</p>
+                    <label>
+                    <select class="browser-default question">
+                        <option value="0" disabled selected>Choose your option</option>
+                        <option value="0" name="q9">Hedge clippings</option>
+                        <option value="0" name="q9">Lawn / grass clippings</option>
+                        <option value="1" name="q9">Branches less than 175mm in diameter</option>
+                        <option value="0" name="q9">Leaves</option>
+                    </select>
+                    </label>
+
+                    <h3>Question 10</h3>
+                    <p class="question-text">You have enjoyed taking this quiz.</p>
+                    <div class="switch question">
+                    <label>
+                    False
+                    <input type="checkbox" name="q10" id="checkbox4" value="1">
+                    <span class="lever"></span>
+                    True
+                    </label>
+                    </div>
+
+                <button class="btn waves-effect waves-light deep-orange pulse quiz-button" id="submitButton" type="button" onClick="submitQuiz()">Submit
+                    <i class="material-icons right">send</i></button>
+
+                <div id="resultArea">
+                   <h2 class="result-title">Results:</h2>
+                    <!--show only wrong answers on submit-->
+                    <div class="quizAnswers" id="Answers"></div>
+              
+                    <!--show score upon submit-->
+                    <div>
+                    <h2 class="quizScore" id="userScore"></h2>
+                    </div>
+                </div>
+                
+            </div>  
+    </main>
+
+    <!-- Footer Content, Links, page information and Copyright -->
+
+    <footer class="page-footer indigo lighten-1">
+        <div class="container ">
+          <div class="row footer-margin-reset">
+            <div class="col l6 s12">
+              <h5 class="white-text">Recycle Otago</h5>
+              <p class="grey-text text-lighten-4">This website has been made as part of Web One for the Bachelor of Information Technology at Otago Polytechnic. All images and media content belong to their respective owners.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">References</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="https://www.dunedin.govt.nz/services/rubbish-and-recycling">DCC</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.cluthadc.govt.nz/your-services/rubbish-and-recycling/Pages/Landfill-and-Transfer-Stations.aspx">Clutha District Council</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.codc.govt.nz/services/recycling-and-rubbish/Pages/default.aspx">Central Otago District Council</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.dunedin.govt.nz/services/rubbish-and-recycling/landfills">Green Island Landfill</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.dunedin.govt.nz/services/rubbish-and-recycling/e-waste">Dunedin e-waste</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2019 Copyright Dion Bedford
+          </div>
+        </div>
+    </footer>
+    <script>
+        document.write("Last updated on " + (lastModified() + " @ " + GetTime()) +".");
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/foundation.css">
+    <title>Recycle Otago</title>
+</head>
+
+<body>
+    <nav class="navColor">
+        <a class="navPad" href="./index.html">Home</a>
+        <a class="navPad" href="./what-to-recycle.html">What to Recycle</a>
+        <a class="navPad" href="./e-waste.html">e-Waste</a>
+        <a class="navPad" href="./recycle-area.html">Recycle Area</a>
+        <a class="navPad" href="./form-quiz.html">Quiz</a>
+        <a class="navPad" href="./contact.html">Contact</a>
+        <a class="rightAlign" href="#top">Recycle Otago </a>
+    </nav>
+
+    <header>
+        <h1></h1>
+    </header>
+
+    <main>
+        <div>
+            <h2 class="pageTitle">Contact</h2>
+        </div>
+
+        <form>
+            <section>
+                <fieldset>
+                    <label for="firstname">First Name:
+                        <br>
+                        <input type="text" id="firstname" name="firstname">
+                    </label>
+                    <br>
+
+                    <label for="lastname">Last Name:
+                        <br>
+                        <input type="text" id="lastname" name="lastname:">
+                    </label>
+                    <br>
+
+                    <label>Email:
+                        <br>
+                        <input type="email" id="email" name="email">
+                    </label>
+                    <br>
+
+                    <label>Phone:
+                        <br>
+                        <input type="tel" id="phone" name="phone">
+                    </label>
+                    <br>
+
+                    <label for="country">Select Country:
+                        <br> </label>
+                    <select id="country">
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Australia">Australia</option>
+                        <option value="England">England</option>
+                        <option value="Japan">Japan</option>
+                        <option value="America">America</option>
+                    </select>
+                    <br>
+
+                    <label>Gender:
+                        <br>
+                        <input type="radio" name="gender" value="male" checked> Male
+                        <br>
+                        <input type="radio" name="gender" value="female"> Female
+                        <br>
+                        <input type="radio" name="gender" value="other"> Other
+                    </label>
+                    <br>
+
+
+                    <label for="textarea">Your Message:
+                        <br>
+                        <textarea name="comment" form="comment" placeholder="Enter text here..."></textarea>
+                    </label>
+                    <br>
+
+                    
+                    <label>Would you like to be contacted:
+                            <br>
+                            <input type="radio" name="followUp" value="yes" checked> Yes
+                            <br>
+                            <input type="radio" name="followUp" value="no"> No
+                            <br>
+                        </label>
+
+                </fieldset>
+            </section>
+
+            <button class="button" type="submit">Submit</button>
+        </form>
+
+
+        <div>
+            <p id="modified"></p>
+        </div>
+
+        <script>
+            document.getElementById("modified").innerHTML = "Last Modified: " + document.lastModified;
+        </script>
+    </main>
+
+    <footer>
+        <div>
+            <p>Created by Rohill Nand &copy;</p>
+        </div>
+        <div class="footerRef footAlign">
+            <p>
+                <b>Reference</b>
+            </p>
+            <div class="refHover">
+                <a href="https://www.dunedin.govt.nz/services/rubbish-and-recycling/rubbish-collection">Dunedin City
+                    Council</a>
+                <br>
+                <a href="https://wastemanagement.co.nz/for-home/transfer-stations/south-island/dunedin/dunedin-transfer-station">Dunedin
+                    Waste Management</a>
+                <br>
+                <a href="http://www.cargillenterprises.co.nz/services/e-waste-recycling">Cargill Enterprises e-Waste</a>
+
+                <br>
+                <a href="https://www.dunedin.govt.nz/services/rubbish-and-recycling/blue-recycling-bin">DCC Blue Bin</a>
+
+                <br>
+                <a href="https://www.dunedin.govt.nz/services/rubbish-and-recycling/yellow-lidded-wheelie-bins">DCC Yellow Bin</a>
+
+                <br>
+                <a href="https://greatist.com/happiness/eco-friendly-tips-save-cash">Being Eco Friendly</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

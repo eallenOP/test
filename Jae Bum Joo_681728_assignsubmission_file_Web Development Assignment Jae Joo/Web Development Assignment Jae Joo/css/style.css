@@ -1,0 +1,230 @@
+  header{
+    text-align: center;
+    font-family: verdana;
+    font-size: 5em;
+    font-weight: bold;    
+    color: white;
+    text-shadow: 4px 4px #153C74;
+    background-color: #87bdd8;
+    -webkit-text-size-adjust: auto;
+    padding-top: 0.6em;
+  }
+
+  header.index{
+    text-align: center;
+    font-family: verdana;
+    font-size: 4.9em;
+    font-weight: bold;
+    padding-top: 0.6em;    
+    color: white;
+    text-shadow: 4px 4px #153C74;
+    background-color: #87bdd8;
+    background-image: url("../images/RECYCLING GENERIC GETTY - 1120.jpg");    
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  main{
+    font-family: verdana;
+    text-align: justify; 
+    padding: 30px 15%;
+    background-color: white;
+  } 
+  
+  main.index{
+    padding:5px 5%;
+    background-color: white;
+  } 
+
+  blockquote{
+    padding: 30px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20pt;
+    text-shadow: 4px 2px white;
+    text-align: left
+  }
+
+  aside{
+    float: right;
+    width: 30%;
+    padding: 5%;
+    padding-top: 0%;        
+  } 
+
+  footer{
+    font-family: Arial;
+    text-align: center;
+    font-size: 10pt;
+    padding: 30px 20%;      
+  }
+
+  h1{    
+    text-shadow: 4px 2px 0px #fff, 9px 4px 0px rgba(0,0,0,0.15);
+  }
+  h2,h3,h4,h5{
+    font-family: verdana;
+  }
+
+  h2{
+    text-align: center;
+  }
+  
+  td{
+    border: 2px solid black;
+    padding: 40px;
+    font-size: 1em;
+    font-family: verdana;
+    font-weight: bold;
+    text-align: center;
+    background-color: aliceblue;
+  }
+
+  table{
+  border-collapse: collapse;
+  margin: 0 auto;
+  border-color: #153C74;
+  }
+
+  .intro{
+    font-family: verdana;
+    font-size: 1.4em;    
+    font-weight: bold;
+    padding: 0 5%;
+    text-align: justify;   
+  }
+
+  .body{
+    font-family: verdana;
+    font-size: 1em;
+    text-align: justify; 
+  }
+  
+  
+  .table{
+    margin:100px;
+  }
+  .list1{
+    margin:60px 0;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a.top {
+    font-size: 0;
+    position: fixed;
+    bottom: 0;
+    font-weight: bold;
+    width: 180px;
+    padding: .6em 0;
+    margin-bottom: 0;
+    border-radius: .3em .3em 0 0;
+    transition: all .3s ease;
+  }
+
+  a.button {
+    display: block;
+    font-size: 1em;      
+  }
+  
+  a.pseudo {
+    color: #0074D9;
+    margin-left: 15%;
+  }
+
+  .flex-container{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.flex-container > div {
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+img {
+  width: 120px;
+  height: auto;  
+}
+
+.grid-container-50{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  justify-content: stretch;
+  padding: 0;
+  font-size: 1.5em;
+  grid-gap: 5px;
+}
+
+.grid-container-33{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  text-align: center;
+  justify-content: stretch;
+  padding: 0;
+  font-size: 1.5em;
+  grid-gap: 5px;
+}
+
+.grid-item{
+  position: relative;
+  width: auto;
+  height: auto;  
+  text-align: center;
+  vertical-align: center;
+  border-color:black;
+  border-style:solid;
+  font-size: 0.9em;
+  border-width:3px;
+  padding: 0;
+}
+ 
+.grid-container-33-quiz{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  text-align: justify;
+  justify-content: center;
+  padding: 0;
+  font-size: 0.9em;
+  grid-gap: 50px;
+}
+
+.grid-item-quiz{
+  border-width:0px;
+}
+
+.grid-container-50 > a:hover{
+  box-shadow: 0 0 10px 1px black;
+}  
+
+.grid-container-33 > a:hover{
+  box-shadow: 0 0 5px 1px black;
+}  
+
+.yellow{
+  background: yellow;
+  color: black;
+}
+
+.red{
+  background: red;
+  color: black;
+}
+.blue{
+  background: #0074d9;
+  color: black;
+}

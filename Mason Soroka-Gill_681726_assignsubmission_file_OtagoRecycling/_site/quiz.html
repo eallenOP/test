@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Include Normalize.css: https://github.com/necolas/normalize.css -->
+    <link rel="stylesheet" href="./css/normalize.css">  
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Recycling Quiz</title>
+</head>
+    <body>
+        <header>
+    
+
+    <nav id="nav">
+    <a href="index.html#nav">Home</a>
+    <a href="info.html">What Happens?</a>
+    <a href="help.html">What can I do?</a>
+    <a href="centres.html">Recycling Centres</a>
+    <a href="quiz.html">Quiz</a>
+</nav>
+</header>
+
+<main>
+    <p class="lastedited" id="lastedited"></p>
+<h2>Recycling Quiz</h2>
+<p>This quiz will test some of the information within this site.</p>
+<form>
+        <div>
+            <span>Which of these bins is for glass recycling?</span><br>
+            <input type="radio" name="one" class="q0" id="a0" value="0" checked>
+            <label for="a0"> Yellow lid wheelie bin</label><br>
+            <input type="radio" name="one" class="q0" value="1" id="a1">
+            <label for="a1"> Blue bin</label><br>
+        </div>
+        <div>
+            <span>Which one of these bins is for general recycling?</span><br>
+            <input type="radio" name="two" class="q1" id="a2" value="0" checked>
+            <label for="a2"> Yellow lid wheelie bin</label><br>
+            <input type="radio" name="two" class="q1" id="a3" value="1">
+            <label for="a3"> Blue bin</label><br>
+        </div>
+        <div>
+            <span>Use the drop down menus to select the right answers</span>
+            <p>
+                After collection, unrecyclable items such as 
+                <select>
+                    <option value="0" class="q2">aluminium cans</option>
+                    <option value="1" class="q2">plastic bags</option>
+                    <option value="2" class="q2">broken glass</option>
+                </select>, 
+                <select>
+                    <option value="0" class="q3">newspapers</option>
+                    <option value="1" class="q3">egg cartons</option>
+                    <option value="2" class="q3">clothing</option>
+                </select>
+                 and 
+                <select>
+                    <option value="0" class="q4">rigid plastic</option>
+                    <option value="1" class="q4">food scraps</option>
+                    <option value="2" class="q4">steel cans</option>
+                 </select> 
+                are removed by hand before automated sorting.
+            </p>
+        </div>
+        <div>
+            <p>
+                During the automated sorting process, paper and cardboard is removed with
+                <select>
+                    <option value="0" class="q5">vibrations</option>
+                    <option value="1" class="q5">optical scanner</option>
+                    <option value="2" class="q5">buoyancy test</option>
+                </select>, 
+                glass is sorted by 
+                <select>
+                    <option value="0" class="q6">vibrations</option>
+                    <option value="1" class="q6">taste</option>
+                    <option value="2" class="q6">colour</option>
+                </select> 
+                and metals are removed by 
+                <select>
+                    <option value="0" class="q7">buoyancy test</option>
+                    <option value="1" class="q7">magnets</option>
+                    <option value="2" class="q7">optical scanner</option>
+                </select>.
+            </p>
+        </div>
+        <div>
+            <span>Please enter your first name into the box below</span><br>
+            <label for="nameBox">Name:</label>
+            <input type="text" id="nameBox">
+        </div>
+        <input class="submitbutton" type="button" value="Submit" onclick="markQuiz()">
+    </form> 
+
+
+</main>
+
+<footer>
+    <a href="#">To top</a>
+    <p>&copy;2019</p>
+</footer>
+
+<script src="./js/lastedited.js"></script>
+
+    <script src="./js/quiz.js"></script>
+
+    </body>
+</html>

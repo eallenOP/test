@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Jae Joo Demo Page</title>
+  <link href="css/picnic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="quiz">
+    RECYCLING QUIZ
+  </header>
+  <hr>
+  <nav>
+    <a href="index.html"><button class="pseudo">HOME</button></a>
+    <a href="page1.html"><button>HOW TO</button></a>
+    <a href="page2.html"><button>WHERE TO</button></a>
+    <a href="page3.html"><button>E-WASTE</button></a>
+    <a href="page4.html"><button class="success">RECYCLING QUIZ</button></a>
+    <a href="page5.html"><button>MORE INFO</button></a>
+  </nav>
+  <a href="#home" class="top pseudo button">▲ TOP ▲</a>
+  <main id="home" class="attractions">
+
+    <section class="flex">
+
+      <article class="full four-fifth-1000">
+
+        <div class="intro">
+
+
+          <h1>Can You Recycle?</h1>
+          <p>
+            Let's see how much you know about recycling!
+          </p>
+        </div>
+
+        <br>
+
+        <form class="body full flex">
+
+          <div class="grid-container-33-quiz">
+
+            <div class="grid-item-quiz">
+              <div class="flex half">
+                <Strong>Enter Your Full Name</Strong>
+                <input class="stack" placeholder="First name" id="firstname" />
+                <input class="stack" placeholder="Last name" id="lastname" />
+              </div>
+
+              <p>In which bin do the following items go into?<br>
+
+                <strong>Question 1:</strong> <br>
+                Plastic Containers
+              </p>
+
+              <select id="q1" class="third">
+                <option value="y">Yellow</option>
+                <option value="b">Blue</option>
+                <option value="r">Red</option>
+              </select>
+              <p>
+                <br>
+                <strong>Question 2:</strong> <br>
+                Glass Jar
+              </p>
+
+              <select id="q2" class="third">
+                <option value="y">Yellow</option>
+                <option value="b">Blue</option>
+                <option value="r">Red</option>
+              </select>
+            </div>
+
+            <div class="grid-item-quiz">
+              <p>
+                <br>
+                <strong>Question 3:</strong> <br>
+                What should NOT go into the yellow bin?
+              </p>
+
+              <label>
+                <input type="checkbox" class="q3-1">
+                <span class="checkable"> Garden Waste </span>
+              </label>
+              <label>
+                <input type="checkbox" class="q3-2">
+                <span class="checkable"> Newspaper </span>
+              </label>
+              <label>
+                <input type="checkbox" class="q3-3">
+                <span class="checkable"> Nappies </span>
+              </label>
+
+              <p><br>
+                <strong>Question 4:</strong><br>
+                How much does it cost to drop off a COMMON COMPUTER at Green Island Landfill?
+              </p>
+
+              <div><br>(1-10) $</div>
+              <div>
+                <input id="q4" type="number" name="quantity" min="1" max="10">
+              </div>
+            </div>
+
+            <div class="grid-item-quiz">
+              <p>
+                <br>
+                <strong>Question 5:</strong>
+                <br>True or False? <br>
+                Dunedin City Council does not offer Red Bins for curbside collections.
+              </p>
+
+              <div>
+                <label>
+                  <input type='radio' checked name="q5" class="q5-1">
+                  <span class="checkable">True</span>
+                </label>
+                <input id="q5" type='radio' name="q5" class="q5-2">
+                <label for="q5" class="checkable">False</label>
+              </div>
+            </div>
+          </div>
+
+        </form>
+        <br>
+        <button onclick="checkanswers()">Submit Answers</button>
+
+        <div id="answers" class="body full four-fifth-1000 flex">
+          <div id="answername">
+          </div>
+
+          <div id="answer1">
+          </div>
+
+          <div id="answer2">
+          </div>
+
+          <div id="answer3">
+          </div>
+
+          <div id="answer4">
+          </div>
+
+          <div id="answer5">
+          </div>
+
+          <div id="answerscore">
+          </div>
+
+        </div>
+
+        <script>
+
+          function checkanswers() {
+            //check answers from the form and display answers below
+            document.getElementById('answername').innerHTML = '<p> Name: ' + document.getElementById('firstname').value + ' ' + document.getElementById('lastname').value + '</p>'
+
+            let score = 0
+
+            if (document.getElementById('q1').value == "y") {
+              document.getElementById('answer1').innerHTML = '<p> Question 1: Correct! <p/>'
+              score = score + 1
+            }
+            else {
+              document.getElementById('answer1').innerHTML = '<p> Question 1: Incorrect! <p/>'
+            }
+
+            if (document.getElementById('q2').value == "b") {
+              document.getElementById('answer2').innerHTML = '<p> Question 2: Correct! <p/>'
+              score = score + 1
+            }
+            else {
+              document.getElementById('answer2').innerHTML = '<p> Question 2: Incorrect! <p/>'
+            }
+
+            if (document.querySelector('input.q3-1').checked && document.querySelector('input.q3-3').checked) {
+              document.getElementById('answer3').innerHTML = '<p> Question 3: Correct! <p/>'
+              score = score + 1
+              if (document.querySelector('input.q3-2').checked) {
+                document.getElementById('answer3').innerHTML = '<p> Question 3: Incorrect! <p/>'
+                score = score - 1
+              }
+            }
+            else {
+              document.getElementById('answer3').innerHTML = '<p> Question 3: Incorrect! <p/>'
+            }
+
+            if (document.getElementById('q4').value == "5") {
+              document.getElementById('answer4').innerHTML = '<p> Question 4: Correct! <p/>'
+              score = score + 1
+            }
+            else {
+              document.getElementById('answer4').innerHTML = '<p> Question 4: Incorrect! <p/>'
+            }
+
+            if (document.querySelector('input.q5-1').checked) {
+              document.getElementById('answer5').innerHTML = '<p> Question 5: Correct! <p/>'
+              score = score + 1
+            }
+            else {
+              document.getElementById('answer5').innerHTML = '<p> Question 5: Incorrect! <p/>'
+            }
+
+            document.getElementById('answerscore').innerHTML = '<br><p> Quiz Score: ' + score
+
+          }
+
+        </script>
+
+
+
+      </article>
+    </section>
+    <p>This document was last modified <span id="time"></span>.</p>
+
+    <script>
+      document.getElementById("time").innerHTML = document.lastModified;
+    </script>
+  </main>
+  <hr>
+
+  <footer>
+    <p>&copy; 2019 Jae Joo</p>
+    <Strong>References</Strong> <br>
+    <a href="https://www.dunedin.govt.nz/services/rubbish-and-recycling">Dunedin City Council</a><br>
+    <a href="https://www.cluthadc.govt.nz/your-services/rubbish-and-recycling/Pages/default.aspx">Balclutha District
+      Council</a><br>
+    <a href="https://www.codc.govt.nz/services/recycling-and-rubbish/Pages/default.aspx">Central Otago District Council</a><br>
+  </footer>
+
+</body>
+
+</html>

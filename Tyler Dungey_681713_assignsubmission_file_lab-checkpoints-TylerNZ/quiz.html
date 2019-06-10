@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js\jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/quiz.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <div class="headcontainer">
+            <div class="head1">
+                <img src="images\logo256.png" alt="logo"> 
+            </div>
+            <div class="head2 space">
+                <h1 class="title">Otago</h1>
+                <h1 class="title">Recycling</h1>
+            </div>
+            <div class="head3">
+                <img src="images\banner.png" alt="banner">
+            </div>
+        </div>       
+    </div>
+
+
+    <div class="navbar">
+        <div class="navcontainer white">          
+            <div class="nav1 c4">
+                <img src="images\logo64.png" alt="logo">
+                <h2><a class="navnav" href="index.html">Home</a></h2>
+            </div>
+            <div class="nav2 c4">
+                <h2><a class="navnav" href="e-Waste.html">e-Waste</a></h2>
+            </div>
+            <div class="nav3 c4">
+                <h2><a class="navnav" href="recycling.html">Recycling</a></h2>
+            </div>
+            <div class="nav4 c4">
+                <h2><a class="navnav" href="quiz.html">Quiz</a></h2>
+            </div>
+            <div class="nav5 c4">
+                <h2><a class="navnav" href="composting.html">Composting</a></h2>
+            </div>
+            <div class="nav6 c4">
+                <h2><a class="navnav" href="kerbside-collections.html">Kerbside Collections</a></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <img src="images\art.jpg" alt="art">    
+    </div>
+    
+    <div class="aside space">
+        <h2>Household Recycling:</h2>
+        <ul id=leftmenu>
+                <li><a href="https://www.wastemanagement.co.nz/household">Waste Management</a></li>
+                <li><a href="https://www.dunedin.govt.nz/services/rubbish-and-recycling/landfills">Green Island Landfill</a></li>
+                <li><a href="https://www.envirowaste.co.nz/">EnviroWaste</a></li>
+                <li><a href="https://www.carcollection.co.nz/">Car recycling</a></li>
+            </ul>
+            <h2>Central Otago Facilities:</h2>
+                <table>
+                    <tr>
+                        <th>Alexandra: Boundary Road</th>
+                        <td>Phone: (03) 440-2204</td>
+                        <td>Open: 7 days, 10am to 5pm</td>
+                    </tr>
+                    <tr>
+                        <th>Cromwell: Barry Avenue</th>
+                        <td>Phone: 03 409-0375</td>
+                        <td>Open 7 days, 10am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <th>Ranfurly: Drumglass Street</th>
+                        <td>Phone: (03) 440-2204</td>
+                        <td>Open Tuesday-Thursday 1-4pm, Saturday-Sunday 1-4pm</td>
+                    </tr>
+                    <tr>
+                        <th>Roxburgh: Roxburgh East Road</th>
+                        <td>Phone: (03) 440-2204</td>
+                        <td>Open Tuesday-Thursday 1-4pm, Saturday-Sunday 1-4pm</td>
+                    </tr>
+                </table>
+                <h2>On site:</h2>
+                <p></p>
+        </div>
+
+    <div class="extra space">
+        <form name="quiz" method="post" name="buttons" id="quiz" onsubmit="return false">
+
+            <div class="question"> Which is <strong>NOT</strong> a colour of Asbestos?</div>
+            <input id="answer" type="radio" name="group1" value="wrong"> White<br>
+            <input id="answer" type="radio" name="group1" value="wrong"> Brown<br>
+            <input id="answer" type="radio" name="group1" value="correct"> Orange<hr>
+    
+            <div class="question">Paper is separated into which groups?</div>
+            <input id="answer" type="radio" name="group2" value="wrong">CardBoard/Lego/Canvas<br>
+            <input id="answer" type="radio" name="group2" value="wrong">Plastic/Paper/Phonebooks<br>
+            <input id="answer" type="radio" name="group2" value="correct">Magazines/CardBoard/Newspapers <hr>
+    
+            <div class="question">Which company could you take your old printer cartridges to for recycling?</div>
+            <input id="answer" type="radio" name="group3" value="wrong">Cartridge World<br>
+            <input id="answer" type="radio" name="group3" value="wrong">Cartridge City<br>
+            <input id="answer" type="radio" name="group3" value="correct">Cartridge town<hr>
+
+            <div class="question"> Which of these is <strong>NOT</strong> a step in building a compost bin?</div>
+            <input id="answer" type="radio" name="group4" value="wrong"> Keeping it out of the wind<br>
+            <input id="answer" type="radio" name="group4" value="wrong"> Creating a frame out of wood<br>
+            <input id="answer" type="radio" name="group4" value="correct"> Eating the worms <hr>
+
+            <div class="question"> A single computer can contain up to ?kg of lead.</div>
+            <input id="answer" type="radio" name="group5" value="wrong"> 1<br>
+            <input id="answer" type="radio" name="group5" value="wrong"> 3<br>
+            <input id="answer" type="radio" name="group5" value="correct"> 2<hr>
+    
+            <button class="submit" onclick="return handleClick();" type="submit">Submit</button>
+            <button class="refresh" onclick="window.location.reload();" type="submit">Refresh</button>
+                
+        </form>
+        
+    </div>
+
+    <div class="sidebar space">
+        <h2>How to recycle different materials</h2>
+        <ul id="menu-materials">
+            <li><a href="recycling.html#Asbestos"><span>Asbestos</span></a></li>
+            <li><a href="recycling.html#Batteries"><span>Batteries</span></a></li>
+            <li><a href="recycling.html#Building"><span>Building Materials</span></a></li>
+            <li><a href="recycling.html#Clinical"><span>Clinical Waste</span></a></li>
+            <li><a href="recycling.html#Composting"><span>Composting</span></a></li>
+            <li><a href="recycling.html#Computers"><span>Computers</span></a></li>
+            <li><a href="recycling.html#Electrical"><span>Electrical Equipment</span></a></li>
+            <li><a href="recycling.html#Furniture"><span>Furniture</span></a></li>
+            <li><a href="recycling.html#Glass"><span>Glass</span></a></li>
+            <li><a href="recycling.html#Metal"><span>Metal</span></a></li>
+            <li><a href="recycling.html#Mobiles"><span>Mobiles</span></a></li>
+            <li><a href="recycling.html#Paint"><span>Paint/Oil</span></a></li>
+            <li><a href="recycling.html#Paper"><span>Paper</span></a></li>
+            <li><a href="recycling.html#Plastic"><span>Plastic</span></a></li>
+            <li><a href="recycling.html#Printer"><span>Printer Cartridges</span></a></li>
+            <li><a href="recycling.html#Recycling"><span>Recycling Banks</span></a></li>
+            <li><a href="recycling.html#Textiles"><span>Textiles</span></a></li>
+            <li><a href="recycling.html#Vehicles"><span>Vehicles</span></a></li>
+            <li><a href="recycling.html#Wood"><span>Wood</span></a></li>
+        </ul>
+    </div>
+
+    <div class="footer white">
+        <div class="footcontainer space">
+            <div class="foot1">
+                <p class="space">References:</p>
+                <ul>
+                    <li class=""><a href="references.html">View all my references</a></li>
+                    <li class=""><a href="references.html">Messagemats</a></li>
+                    <li class=""><a href="references.html">Wastebusters</a></li>
+                    <li class=""><a href="references.html">Recycling guide</a></li>
+                </ul>
+            </div>       
+            <div class="foot2">
+                <p class="space">Images:</p>
+                <ul>
+                    <li class=""><a href="references.html">Image References</a></li>
+                    <li class=""><a href="references.html">Styling help</a></li>
+                    <li class=""><a href="references.html">Recycling</a></li>
+                    <li class=""><a href="references.html">Dunedin govt</a></li>
+                </ul>
+            </div>
+            <div class="foot3">
+                <p class="space">Where I got help from:</p>
+                <ul>
+                    <li class=""><a href="references.html">Inspiration</a></li>
+                    <li class=""><a href="references.html">General help</a></li>
+                    <li class=""><a href="references.html">CSS Grid</a></li>
+                    <li class=""><a href="references.html">colours</a></li>
+                </ul>
+            </div>
+            <div class="foot4">
+                    <p>Copyright &copy; 2019 Tyler Dungey<br>
+                    <a href="mailto:dungetj1@student.op.ac.nz" class ="white">Email me</a><br>
+                    Last Modified:<br>
+                    <script>document.write (document.lastModified)</script></p>
+                <div></div>
+            </div>
+        </div>        
+    </div>
+    </div>
+</div>
+<script>
+function handleClick()
+          {         
+        var amountCorrect = 0;          
+        for(var i = 1; i <= 45; i++) {
+          var radios = document.getElementsByName('group'+i);
+          for(var j = 0; j < radios.length; j++) {
+            var radio = radios[j];
+            if(radio.value == "correct" && radio.checked) {
+              amountCorrect++;
+            }
+          }
+         }                   
+            alert("Correct Responses: " + amountCorrect);
+          }
+</script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/foundation.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navColor">
+        <a class="navPad" href="./index.html">Home</a>
+        <a class="navPad" href="./what-to-recycle.html">What to Recycle</a>
+        <a class="navPad" href="./e-waste.html">e-Waste</a>
+        <a class="navPad" href="./recycle-area.html">Recycle Area</a>
+        <a class="navPad" href="./form-quiz.html">Quiz</a>
+        <a class="navPad" href="./contact.html">Contact</a>
+        <a class="rightAlign" href="#top">Recycle Otago </a>
+    </nav>
+
+    <header id="top">
+        <h1></h1>
+    </header>
+
+    <main>
+        <div>
+            <h2 class="pageTitle">Recycling Quiz</h2>
+        </div>
+
+        <div>
+            <form>
+                <legend>Recycling Quiz</legend>
+
+                <input type="text" placeholder="Your name here" id="players-name">
+
+                <br>Q1. Which bin is used to recycle tin can?
+                <select id="question-one">
+                    <option value="Red">Red</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Blue">Blue</option>
+                </select>
+                <br>Q2. Which bing is used for house hold rubbish?
+                <select id="question-two">
+                    <option value="Red">Red</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Blue">Blue</option>
+                </select>
+
+                <br>Q3. Which bin is used to recycle glass jars?
+                <select id="question-three">
+                    <option value="Red">Red</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Blue">Blue</option>
+                </select>
+
+                <br>Q4. What bin would a egg trays go in?
+                <select id="question-four">
+                    <option value="Red">Red</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Blue">Blue</option>
+                </select>
+
+                <br>Q5. A laptop can be placed in the blue bin for recycling?
+                <label for="question-five">
+                    <input type="radio" id="question-five" name="question-five" value="True" checked>True
+                    <br>
+                    <input type="radio" id="question-five" name="question-five" value="False">False
+                </label>
+                <br>
+
+                Q6. How much does it cost to recycle a keyboard?
+                <input type="number" id="question-six" name="question-six" min="1" max="5" value="1">
+                <br>
+
+                <button class="button" type="button" onclick="getQuiz(), tableOn()">Submit</button>
+            </form>
+
+            <div class="tableOneNoMarg" id="table-one">
+                <p id="displayName"></p>
+                <table class="resultSpace">
+                    <tr>
+                        <th>Question</th>
+                        <th>Answered</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td id="question-num-one"></td>
+                        <td id="question-one-ans"></td>
+                        <td id="question-one-correct-ans"></td>
+                    </tr>
+                    <tr>
+                        <td id="question-num-two"></td>
+                        <td id="question-two-ans"></td>
+                        <td id="question-two-correct-ans"></td>
+                    </tr>
+                    <tr>
+                        <td id="question-num-three"></td>
+                        <td id="question-three-ans"></td>
+                        <td id="question-three-correct-ans"></td>
+                    </tr>
+                    <tr>
+                        <td id="question-num-four"></td>
+                        <td id="question-four-ans"></td>
+                        <td id="question-four-correct-ans"></td>
+                    </tr>
+                    <tr>
+                        <td id="question-num-five"></td>
+                        <td id="question-five-ans"></td>
+                        <td id="question-five-correct-ans"></td>
+                    </tr>
+                    <tr>
+                        <td id="question-num-six"></td>
+                        <td id="question-six-ans"></td>
+                        <td id="question-six-correct-ans"></td>
+                    </tr>
+                </table>
+
+                <p id="total-score"></p>
+            </div>
+        </div>
+
+        <script>
+            function getQuiz() {
+
+                let total = 0;
+
+                let name = document.getElementById("players-name").value;
+                document.getElementById("displayName").innerHTML = "Results for " + name
+
+                let questionOne = document.getElementById("question-one").value;
+                document.getElementById("question-num-one").innerHTML = "Question One: ";
+                document.getElementById("question-one-ans").innerHTML = questionOne;
+
+                let questionTwo = document.getElementById("question-two").value;
+                document.getElementById("question-num-two").innerHTML = "Question Two: ";
+                document.getElementById("question-two-ans").innerHTML = questionTwo;
+
+                let questionThree = document.getElementById("question-three").value;
+                document.getElementById("question-num-three").innerHTML = "Question Three: ";
+                document.getElementById("question-three-ans").innerHTML = questionThree;
+
+                let questionFour = document.getElementById("question-four").value;
+                document.getElementById("question-num-four").innerHTML = "Question Four: ";
+                document.getElementById("question-four-ans").innerHTML = questionFour;
+
+                if (questionOne == "Yellow") {
+                    document.getElementById("question-one-correct-ans").innerHTML = "Correct";
+                    total += 1;
+                }
+                else {
+                    document.getElementById("question-one-correct-ans").innerHTML = "Incorrect";
+                }
+
+                if (questionTwo == "Red") {
+                    document.getElementById("question-two-correct-ans").innerHTML = "Correct";
+                    total += 1;
+                }
+                else {
+                    document.getElementById("question-two-correct-ans").innerHTML = "Incorrect";
+                }
+
+                if (questionThree == "Blue") {
+                    document.getElementById("question-three-correct-ans").innerHTML = "Correct";
+                    total += 1;
+                }
+                else {
+                    document.getElementById("question-three-correct-ans").innerHTML = "Incorrect";
+                }
+
+                if (questionFour == "Yellow") {
+                    document.getElementById("question-four-correct-ans").innerHTML = "Correct";
+                    total += 1;
+                }
+                else {
+                    document.getElementById("question-four-correct-ans").innerHTML = "Incorrect";
+                }
+
+                //this section is for the radio button
+                //question five
+                let questionFive = document.getElementById("question-five").checked;
+                document.getElementById("question-num-five").innerHTML = "Question Five: ";
+                if (questionFive == true) {
+                    questionFiveCap = "True";
+                }
+                else {
+                    questionFiveCap = "False";
+                }
+                document.getElementById("question-five-ans").innerHTML = questionFiveCap;
+
+
+                if (questionFive == true) {
+                    document.getElementById("question-five-correct-ans").innerHTML = "Incorrect";
+                }
+                else {
+                    document.getElementById("question-five-correct-ans").innerHTML = "Correct";
+                    total += 1;
+                }
+
+                //this section is for the text input section
+                //question six
+                let questionSix = document.getElementById("question-six").value;
+                document.getElementById("question-num-six").innerHTML = "Question Six: ";
+                document.getElementById("question-six-ans").innerHTML = "$" + questionSix + ".00";
+                if (questionSix == 5){
+                    document.getElementById("question-six-correct-ans").innerHTML = "Correct";
+                    total += 1;
+                }
+                else {
+                    document.getElementById("question-six-correct-ans").innerHTML = "Incorrect";
+                }
+
+                //this will dispay out to the screen this total score
+                document.getElementById("total-score").innerHTML = "Total: " + total + " / 6";
+            }
+        </script>
+
+        <script>
+            //turning on the table
+            //in style the display is none
+            function tableOn() {
+                document.getElementById("table-one").style.display = "inherit";
+            }
+        </script>
+
+        <div>
+            <p id="modified"></p>
+        </div>
+
+        <script>
+            document.getElementById("modified").innerHTML = "Last Modified: " + document.lastModified;
+        </script>
+    </main>
+
+    <footer>
+        <div>
+            <p>Created by Rohill Nand &copy;</p>
+        </div>
+        <div class="footerRef footAlign">
+            <p>
+                <b>Reference</b>
+            </p>
+            <div class="refHover">
+                <a href="https://www.dunedin.govt.nz/services/rubbish-and-recycling/rubbish-collection">Dunedin City Council
+                </a>
+                <br>
+                <a href="https://wastemanagement.co.nz/for-home/transfer-stations/south-island/dunedin/dunedin-transfer-station">Dunedin Waste Management</a>
+                <br>
+                <a href="http://www.cargillenterprises.co.nz/services/e-waste-recycling">Cargill Enterprises e-Waste</a>
+
+                <br>
+                <a href="https://www.dunedin.govt.nz/services/rubbish-and-recycling/blue-recycling-bin">DCC Blue Bin</a>
+
+                <br>
+                <a href="https://www.dunedin.govt.nz/services/rubbish-and-recycling/yellow-lidded-wheelie-bins">DCC Yellow Bin</a>
+
+                <br>
+                <a href="https://greatist.com/happiness/eco-friendly-tips-save-cash">Being Eco Friendly</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

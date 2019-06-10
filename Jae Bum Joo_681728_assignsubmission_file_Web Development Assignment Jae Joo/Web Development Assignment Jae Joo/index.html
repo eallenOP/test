@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Jae Joo Demo Page</title>
+  <link href="css/picnic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="index">
+    OTAGO
+    <br>
+    RECYCLING
+  </header>
+  <hr>
+  <nav>
+    <a href="index.html"><button class="success">HOME</button></a>
+    <a href="page1.html"><button>HOW TO</button></a>
+    <a href="page2.html"><button>WHERE TO</button></a>
+    <a href="page3.html"><button>E-WASTE</button></a>
+    <a href="page4.html"><button>RECYCLING QUIZ</button></a>
+    <a href="page5.html"><button>MORE INFO</button></a>
+  </nav>
+  <main class="index" id="home">
+    <section class="flex">
+      <article class="full four-fifth-1000">
+        <div class="grid-container-50">
+          <a href="page1.html" class="grid-item">
+
+            <h2>HOW TO RECYCLE</h2>
+            <img src="images/recyclingbin.jpg">
+            <img src="images/recycle2.jfif">
+            <img src="images/recycle3.jpg">
+          </a>
+          <a href="page2.html" class="grid-item">
+            <h2>WHERE TO RECYCLE</h2>
+            <img src="images/landfill.jfif">
+            <img src="images/landfill1.jfif">
+            <img src="images/landfill2.jfif">
+          </a>
+          <a href="page3.html" class="grid-item">
+
+            <h2>E-WASTE</h2>
+            <img src="images/ewaste1.jfif">
+            <img src="images/ewaste2.jfif">
+            <img src="images/ewaste3.jpg">
+          </a>
+          <a href="page4.html" class="grid-item">
+            <h2>RECYCLING QUIZ</h2>
+            <img src="images/quiz1.jfif">
+            <img src="images/quiz2.jfif">
+            <img src="images/quiz3.jfif">
+          </a>
+        </div>
+      </article>
+    </section>
+    <p>This document was last modified <span id="time"></span>.</p>
+
+    <script>
+      document.getElementById("time").innerHTML = document.lastModified;
+    </script>
+    
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2019 Jae Joo</p>
+    <Strong>References</Strong> <br>
+    <a href="https://www.dunedin.govt.nz/services/rubbish-and-recycling">Dunedin City Council</a><br>
+    <a href="https://www.cluthadc.govt.nz/your-services/rubbish-and-recycling/Pages/default.aspx">Balclutha District
+      Council</a><br>
+    <a href="https://www.codc.govt.nz/services/recycling-and-rubbish/Pages/default.aspx">Central Otago District Council</a><br>
+  </footer>
+
+</body>
+
+</html>
