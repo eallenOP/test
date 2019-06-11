@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parallax">
+        <main>
+            <header>
+                <h1>Green Otago</h1>
+            </header>
+            <nav>
+                <a class="button" href="index.html">Home</a>
+                <a class="button" href="Recycle.html">Recycle</a>
+                <a class="button" href="Reduce.html">Reduce </a>
+                <a class="button" href="E-Waste.html">E-Waste</a>
+                <a class="button" href="Landfill.html">Landfills</a>
+                <a class="button" href="Quiz.html">Quiz</a>
+            </nav>
+            <div class="Quiz-container">
+                <form class="myform" action="" method="post">
+                    <fieldset>
+                        <section>
+                            <legend id="legend1">Can you recycle broken glass?</legend> <br>
+                            <input type="radio" name="glass" id="radio-yes" value="yes"> Yes <br>
+                            <input type="radio" name="glass" id="radio-no" value="no"> No <br>
+                        </section>
+                        <section>
+                            <br>
+                            <legend id="legend2">One of these will reduce your impact on the enviroment</legend> <br>
+                            <input type="checkbox" name="recycle" id="check1" value="DriveFast">Driving Faster to save
+                            petrol<br>
+                            <input type="checkbox" name="recycle" id="check2" value="Waterless">Brushing your teath
+                            without
+                            the
+                            water
+                            running<br>
+                            <input type="checkbox" name="recycle" id="check3" value="EatingOut">Eating out more to save
+                            on
+                            dishes<br>
+                            <input type="checkbox" name="recycle" id="check4" value="SwitchOff">Switching off your Tv
+                            at
+                            the
+                            wall<br>
+                        </section>
+                        <section>
+                            <br>
+                            <legend id="legend3">
+                                Which of these lanfills can recycle E-waste</legend>
+                            <br>
+                            <select name="" id="landfill">
+                                <option value="MtCooee" id="palm">Palmerston Landiill</option>
+                                <option value="Envirowaste" id="enviro">Envirowaste</option>
+                                <option value="fiat" id="ranf">Ranfurly Transfer Station</option>
+                                <option value="WasteBusters" id="waste">WasteBusters Wanaka</option>
+                            </select><br>
+                            <br>
+                        </section>
+                    </fieldset>
+                    <button type="button" value="Submit" onclick="checkResults();">Submit</button>
+                </form>
+            </div>
+            <footer>
+                <script>
+                    var date = document.lastModified;
+                    document.write("Last Modified: " + date);
+                </script>
+            </footer>
+        </main>
+    </div>
+</body>
+<script>
+    function checkResults() {
+        if (document.getElementById("radio-yes").checked) {
+            let temp = document.getElementById("legend1");
+            temp.classList.remove("loss");
+            temp.classList.add("win");
+        }
+        else {
+            let temp = document.getElementById("legend1");
+            temp.classList.remove("win");
+            temp.classList.add("loss");
+        }
+
+        if (document.getElementById("check2").checked && document.getElementById("check4").checked) {
+            let temp = document.getElementById("legend2");
+            temp.classList.remove("loss");
+            temp.classList.add("win");
+        }
+        else {
+            let temp = document.getElementById("legend2");
+            temp.classList.remove("win");
+            temp.classList.add("loss");
+        }
+        let answer = document.getElementById("landfill").selectedIndex;
+        if (answer == 3) {
+            let temp = document.getElementById("legend3");
+            temp.classList.remove("loss");
+            temp.classList.add("win");
+        }
+        else {
+            let temp = document.getElementById("legend3");
+            temp.classList.remove("win");
+            temp.classList.add("loss");
+        }
+    }
+</script>
+
+</html>

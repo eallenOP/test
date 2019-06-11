@@ -1,0 +1,152 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/Recycle.css" rel="stylesheet">
+    <title>Recycle-Contact</title>
+  </head>
+  <body>
+ 
+	<div class="hero-image">
+		<div class="hero-text">
+			<h1> Recycle Otago </h1>
+		</div>
+	</div>
+
+  <nav>
+	
+			<a class="hov" href="home.html">Home</a>
+			<a class="hov" href="Do's.html">Do's and Dont's</a>
+			<a class="hov" href="Area.html">Recycling Areas</a>
+			<a class="hov" href="e-waste.html">e-Waste</a>
+			<a class="hov" href="MyImpact.html">My Impact</a>
+			<a class="hov" href="Quiz.html">Quiz</a>
+		
+	</nav>
+  <main>
+	<div class="quiz-grid">
+		<div>
+			<form>
+				<h3> Do you know your recycling?</h3>
+				<p>
+					<label class="uneffected" for="firstname">
+						Your Name: <input type="text" id="firstname" name="first-name">
+					</label>
+				
+				<p>
+					<p> Which bin is for cardboard? </p>
+					<select class="width" id="bins">
+					<option value = "1">Red</option>
+					<option value = "2">Yellow</option>
+					<option value = "3">Blue</option>
+					<option value = "4">Other</option>
+					</select>
+				
+				<div id="e-waste">
+					<p>
+						<p> Which of these is e-Waste?</p>				
+							<input class="gap" type="radio" name="waste" id="pc" value="pc"> PC					
+							<input  type="radio" name="waste" id="fruit" value="fruit"> Fruit					
+							<input  type="radio" name="waste" id="can" value="can"> Can
+					
+				</div>
+			
+				<p> How can you be more environmental friendly?</p>
+					<label  for="car">Using your car more</label>
+					<input type="radio" name="enviro" id="car" value="car">
+					<label  for="electro">Buying an eletro car</label>
+					<input type="radio" name="enviro" id="electro" value="electro">
+					<label  for="phone">Buying a new phone every month</label>
+					<input type="radio" name="enviro" id="phone" value="phone">
+			
+			
+			</form>
+			<button class="button" onclick="fillform()"> Submit </button>
+		</div>
+		
+	
+		<div>
+			<h3> Answers </h3>
+			<div class="answers"  id="name"> </div>
+			<div class="answers" id="Q1"> </div>
+			<div class="answers" id="Q2"> </div>
+			<div class="answers" id="Q3"> </div>
+		</div>
+	</div>
+	
+	<footer>
+		<p class="about"> Recycling Otago &#169;   </p>
+		<h4> References </h4>
+		<a class="foot" href="https://www.dunedin.govt.nz/services/rubbish-and-recycling/e-waste">Dunedin City Council </a>
+		<a class="foot" href="https://www.google.co.nz/maps/search/recycling+centre+otago/@-45.3562418,170.3241221,8.63z">Google Maps </a>
+		<a class="foot" href="http://cms.leoncountyfl.gov/Home/Departments/Office-of-Resource-Stewardship/Solid-Waste/Recycling-and-Educational-Services">Recycling and Educational Services </a>
+		<a class="foot" href="https://www.embedgooglemap.net/">EmbedGoogleMap </a>
+		<a class="foot" href="https://www.marion.sa.gov.au/services-we-offer/waste-and-recycling/three-bin-system">Marion </a>
+		<a class="foot" href="https://www.wheelsforwishes.org/news/live-a-more-eco-friendly-lifestyle/">Wheels for Wishes </a>
+		<p class="mod" id="demo"> </p>
+	</footer>
+ </main>
+	 <script>
+	function fillform(){
+	// for the name
+		let name = document.getElementById("firstname").value;
+		document.getElementById('name').innerHTML = " Hello " + name + " here are your answers:";
+	//for the Q1
+		let bin = document.getElementById("bins").value;
+		if (bin == "2")
+		{
+			document.getElementById('Q1').innerHTML = "Q1: Correct! Cardboard goes into the yellow bin. ";
+			document.getElementById("Q1").style.color = "green";
+		}
+		if (bin != "2")
+		{
+			document.getElementById('Q1').innerHTML = "Q1: Wrong! Go back to the Recycling Rules. ";
+			document.getElementById("Q1").style.color = "red";
+		}
+	//for Q2
+		if(document.getElementById("pc").checked)
+		{
+			document.getElementById('Q2').innerHTML = "Q2: Correct! PC is a type of e-Waste. ";
+			document.getElementById("Q2").style.color = "green";
+		}
+		else if(document.getElementById("fruit").checked)
+		{
+			document.getElementById('Q2').innerHTML = "Q2: Wrong! Go back to the e-Waste info. ";
+			document.getElementById("Q2").style.color = "red";
+		}
+		else if(document.getElementById("can").checked)
+		{
+			document.getElementById('Q2').innerHTML = "Q2: Wrong! Go back to the e-Waste info. ";
+			document.getElementById("Q2").style.color = "red";
+		}
+		else
+		{
+			document.getElementById('Q2').innerHTML = "Q2: Wrong! Go back to the e-Waste info. ";
+			document.getElementById("Q2").style.color = "red";
+		}
+	//for Q3
+		if(document.getElementById("electro").checked)
+		{
+			document.getElementById('Q3').innerHTML = "Q3: Correct! Buying an electro car is great. ";
+			document.getElementById("Q3").style.color = "green";
+		}
+		else if(document.getElementById("car").checked)
+		{
+			document.getElementById('Q3').innerHTML = "Q3: Wrong! Check the my Impact info again. ";
+			document.getElementById("Q3").style.color = "red";
+		}
+		else if(document.getElementById("phone").checked)
+		{
+			document.getElementById('Q3').innerHTML = "Q3: Wrong! Check the my Impact info again. ";
+			document.getElementById("Q3").style.color = "red";
+		}
+		else
+		{
+			document.getElementById('Q3').innerHTML = "Q3: Wrong! Check the my Impact info again. ";
+			document.getElementById("Q3").style.color = "red";
+		}
+		}
+		var x = document.lastModified;
+		document.getElementById("demo").innerHTML ="Last modified: "+ x;
+		</script>
+  </body>
+</html>

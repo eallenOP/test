@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <meta charset='UTF-8' />
+    <title>Recycle</title>
+</head>
+
+<body>
+
+    <header>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <img class="logo" alt="header" src="headerimg.png" />
+        </div>
+        <nav>
+            <ul>
+                <li><a class="active" href="HomePage.html">Home</a></li>
+                <li><a href="page1.html">About Us</a></li>
+                <li><a href="page2.html">Bins</a></li>
+                <li><a href="page3.html">Recycle In Your Area</a></li>
+                <li><a href="page4.html">e-Watse </a></li>
+                <li><a href="page5.html">How to Help</a></li>
+                <li><a href="page6.html">Quiz</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+
+        <p>This quiz is based on some recycling.If you get a question right it will turn green but if not it will turn
+            red.</p>
+        <form>
+            <fieldset>
+                <p>What is your name?</p>
+                <input type="text" name="name" id="name" value=""><br>
+                <br>
+                <p id="question1">Which bin is used for waste?</p>
+                <label for="yellow lidded bin">yellow lidded bin</label>
+                <input type="radio" name="answerone" id="yellow" value="yellow lidded bin"><br>
+                <label for="red lidded bin">red lidded bin</label>
+                <input type="radio" name="answerone" id="red" value="red lidded bin"><br>
+                <label for="other">Other</label>
+                <input type="radio" name="answerone" id="other" value="other"><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <p id="question2">Which is hard to recycle?</p>
+                <label for="glass">glass</label>
+                <input type="radio" name="answer" id="glass" value="glass"><br>
+                <label for="paper">paper</label>
+                <input type="radio" name="answer" id="paper" value="paper"><br>
+                <label for="plastic">plastic</label>
+                <input type="radio" name="answer" id="plastic" value="plastic"><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <p id="question3">what you should avoid in order to be environmental friendly?</p>
+                <label for="buyplastic">Buying Plastic</label>
+                <input type="checkbox" name="answertwo" id="buyplastic" value="buyplastic"><br>
+                <label for="bag">use reusable bag</label>
+                <input type="checkbox" name="answertwo" id="bag" value="bag"><br>
+                <label for="clean">clean recycable things</label>
+                <input type="checkbox" name="answertwo" id="clean" value="clean"><br>
+                <label for="noclean">not cleaning recycable things</label>
+                <input type="checkbox" name="answertwo" id="noclean" value="noclean"><br>
+            </fieldset>
+            <br>
+            <input type="button" onclick="check()" value="Submit">
+
+
+            <script>
+                function check() {
+                    if (document.getElementById("yellow").checked) {
+                        let temp = document.getElementById("question1");
+                        temp.classList.add("correct");
+                        temp.classList.remove("incorrect");
+                    }
+                    else {
+                        let temp = document.getElementById("question1");
+                        temp.classList.add("incorrect");
+                        temp.classList.remove("correct");
+                    }
+                    if (document.getElementById("plastic").checked) {
+                        let temp = document.getElementById("question2");
+                        temp.classList.add("correct");
+                        temp.classList.remove("incorrect");
+                    }
+                    else {
+                        let temp = document.getElementById("question2");
+                        temp.classList.add("incorrect");
+                        temp.classList.remove("correct");
+                    }
+                    if (document.getElementById("buyplastic").checked && document.getElementById("noclean").checked) {
+                        let temp = document.getElementById("question3");
+                        temp.classList.add("correct");
+                        temp.classList.remove("incorrect");
+                    }
+                    else {
+                        let temp = document.getElementById("question3");
+                        temp.classList.add("incorrect");
+                        temp.classList.remove("correct");
+                    }
+
+
+                }
+
+            </script>
+            <br>
+            <script>
+                var date = document.lastModified;
+                document.write("Last Modified: " + date);
+            </script>
+
+    </main>
+    </form>
+    <footer>
+        <h3>References</h3>
+        <a href="https://www.w3schools.com">W3Schools</a>
+        <br>
+        <a href="https://www.codc.govt.nz/services/recycling-and-rubbish/transfer-stations/Pages/default.aspx">Central
+            Otago City Concil</a>
+        <br>
+        <a href="https://www.lostinsilverfern.com/2018/04/11/ways-to-be-more-environmentally-friendly/">LOST IN SILVER
+            FERN</a>
+        <br>
+        <a href="https://www.dunedin.govt.nz/services/rubbish-and-recycling/landfills">Dunedin City Council</a>
+        <br>
+        <a href="https://www.dunedin.govt.nz/services/rubbish-and-recycling/e-waste">Dunedin City Council</a>
+    </footer>
+</body>
+
+</html>

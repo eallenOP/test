@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz - Recycling In Otago</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recycling In Otago</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="recyclables.html">Recyclables</a>
+            <a href="landfills.html">Landfills</a>
+            <a href="howtohelp.html"> How to Help</a>
+            <a href="#" class="active-link">Quiz</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Quiz</h2>
+        <form id="quiz-form">
+            Name: <input type="text" id="name-box">
+            <section>
+                <h3 id="q1">Question 1:</h3>
+                <p>Which bin should flattened cardboard go in to?</p>
+                <input type="radio" name="q1" value="glass-bin"> Glass Bin
+                <input type="radio" name="q1" value="yellow-lidded" id="q1-answer"> Yellow-lidded Recycling Bin
+                <input type="radio" name="q1" value="red-bin"> Red-lidded Rubbish Bin
+            </section>
+            <section>
+                <h3 id="q2">Question 2:</h3>
+                <p>Which landfills exist within otago?</p>
+                <input type="checkbox" name="q2" value="palmerston" id="q2-answer1"> Palmerston Landfill
+                <input type="checkbox" name="q2" value="botany" id="q2-wrong1"> Bontany Landfill
+                <input type="checkbox" name="q2" value="queens" id="q2-wrong2"> Queens Landfill
+                <input type="checkbox" name="q2" value="green-island" id="q2-answer2"> Green Island Landfill
+            </section>
+            <section>
+                <h3 id="q3">Question 3:</h3>
+                <p>Which store provides the TechCollect service?</p>
+                <select id="q3-input">
+                    <option value="e-waste">E-Waste Co</option>
+                    <option value="it">IT Solutions</option>
+                    <option value="officemax">OfficeMax</option>
+                    <option value="polytech">Otago Polytech</option>
+                </select> 
+            </section>
+            <section>
+                <h3 id="q4">Question 4:</h3>
+                <p>Which of these types of glass are okay to put in a glass bin?</p>
+                <input type="checkbox" name="q4" value="glass-bottles" id="q4-answer"> Glass bottles
+                <input type="checkbox" name="q4" value="mirrors" id="q4-wrong1"> Mirrors
+                <input type="checkbox" name="q4" value="sheet" id="q4-wrong2"> sheet glass
+            </section>
+            <section>
+                <h3 id="q5">Question 5:</h3>
+                <p>What street is the Green Island Landfill on?</p>
+                <input type="radio" name="q5" value="george"> George Street
+                <input type="radio" name="q5" value="brighton" id="q5-answer"> Brighton Road
+                <input type="radio" name="q5" value="falcon"> Falcon Street
+            </section>
+            <button type="button" id="btn">Submit</button>
+        </form>
+        <div id="output-area">
+
+        </div>
+    </main>
+    <footer class="small-text">
+        <small>&copy; Copyright 2019, James Olsen</small>
+        <small id="last-modified"></small>
+    </footer>
+
+    <script src="../js/last-modified.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+    background-color: #eee;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #555;
+}
+
+a:hover, .contents section img:hover {
+    opacity: 0.8;
+}
+
+/* Header + Nav */
+header {
+    background-color: #0c4299;
+    color: #eee;
+    border-bottom: 3px solid #ffd505;
+}
+
+h1 {
+    display: inline;
+    margin: 0 25px;
+}
+
+nav {
+    display: inline-flex;
+}
+
+nav a {
+    padding: 25px;
+    color: inherit;
+}
+
+nav a:hover {
+    background-color: #052963;
+    opacity: 1.0;
+}
+
+.active-link {
+    background-color: #052963;
+}
+
+/* Main */
+main {
+    max-width: 80em;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contents section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.contents section div {
+    padding: 50px;
+    margin: auto;
+}
+
+.contents section img {
+    max-height: 430px;
+    max-width: 640px;
+    object-fit: fill;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+tr > * {
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+tr:hover {
+    background-color: #ccc;
+}
+
+td:hover {
+    background-color: #bbb;
+}
+
+input, select {
+    margin-left: 30px;
+}
+
+button {
+    margin-top: 30px;
+}
+
+/* Footers */
+.references {
+    margin-top: 20px;
+    background-color: #dbdbdb;
+    padding: 10px;
+}
+
+.small-text {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+
